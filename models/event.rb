@@ -24,43 +24,50 @@ class Event
   end
 
 
-# 4 BELOW WILL INVOLVE SQL STATEMENTS USING THE PARTICIPATION JOIN TABLE.
-  def participants()
-  end
+  # def athletes()
+  #   sql = "SELECT a.* FROM athletes a INNER JOIN participations p on a.id = p.athlete_id WHERE r.event_id = #{@id};"
+  #   return Athlete.map_items(sql)
+  # end
 
-  def gold_medalist()
-  end
+  # def gold_medalist()
+  #   sql = "SELECT * FROM athletes WHERE id = #{@gold_id}"
+  #   return Athlete.map_item(sql)
+  # end
 
-  def silver_medalist()
-  end
+  # def silver_medalist()
+  #   sql = "SELECT * FROM athletes WHERE id = #{@silver_id}"
+  #   return Athlete.map_item(sql)
+  # end
 
-  def bronze_medalist()
-  end
+  # def bronze_medalist()
+  #   sql = "SELECT * FROM athletes WHERE id = #{@silver_id}"
+  #   return Athlete.map_item(sql)
+  # end
 
-  def self.all()
-    sql = "SELECT * FROM events"
-    events = SqlRunner.run( sql )
-    result = events.map { |e| Event.new( e ) }
-    return result
-  end
+  # def self.all()
+  #   sql = "SELECT * FROM events"
+  #   events = SqlRunner.run( sql )
+  #   result = events.map { |e| Event.new( e ) }
+  #   return result
+  # end
 
-  def self.find(id)
-    sql = "SELECT * FROM events WHERE id = #{id}"
-    event = SqlRunner.run(sql).first
-    return Event.new(event)
-  end
+  # def self.find(id)
+  #   sql = "SELECT * FROM events WHERE id = #{id}"
+  #   event = SqlRunner.run(sql).first
+  #   return Event.new(event)
+  # end
 
-  def self.update(options)
-    sql = "UPDATE events SET 
-            name = '#{options['name']}', sport = '#{options['sport']}', gold_id = '#{options['gold_id']}', silver_id = '#{options['silver_id']}', bronze_id = '#{options['bronze_id']}'
-            WHERE id = #{options['id']};"
-    SqlRunner.run(sql)
-  end
+  # def self.update(options)
+  #   sql = "UPDATE events SET 
+  #           name = '#{options['name']}', sport = '#{options['sport']}', gold_id = '#{options['gold_id']}', silver_id = '#{options['silver_id']}', bronze_id = '#{options['bronze_id']}'
+  #           WHERE id = #{options['id']};"
+  #   SqlRunner.run(sql)
+  # end
 
-  def self.destroy(id)
-    sql = "DELETE FROM events WHERE id = #{id};"
-    SqlRunner.run(sql)
-  end 
+  # def self.destroy(id)
+  #   sql = "DELETE FROM events WHERE id = #{id};"
+  #   SqlRunner.run(sql)
+  # end 
 
   def self.delete_all()
     sql = "DELETE FROM events"

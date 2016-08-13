@@ -1,6 +1,6 @@
-DROP TABLE athletes;
-DROP TABLE events;
 DROP TABLE participations;
+DROP TABLE events;
+DROP TABLE athletes;
 DROP TABLE nations;
 
 
@@ -18,9 +18,9 @@ CREATE TABLE events (
   id serial4 primary key,
   name VARCHAR(255),
   sport VARCHAR(255),
-  gold_id references athletes(id) ON DELETE CASCADE,
-  silver_id references athletes(id) ON DELETE CASCADE,
-  bronze_id references athletes(id) ON DELETE CASCADE
+  gold_id int4 references athletes(id) ON DELETE CASCADE,
+  silver_id int4 references athletes(id) ON DELETE CASCADE,
+  bronze_id int4 references athletes(id) ON DELETE CASCADE
 );
 
 CREATE TABLE participations (

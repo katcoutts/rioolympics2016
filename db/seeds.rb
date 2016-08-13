@@ -4,10 +4,10 @@ require_relative('../models/event.rb')
 require_relative('../models/nation.rb')
 require_relative('../models/participation.rb')
 
-Athlete.delete_all()
-Event.delete_all()
-Participation.delete_all()
-Nation.delete_all()
+# Athlete.delete_all()
+# Event.delete_all()
+# Participation.delete_all()
+# Nation.delete_all()
 
 
 nation1 = Nation.new({ 'name' => 'Great Britain'})
@@ -29,7 +29,6 @@ nation6.save
 nation7.save
 nation8.save
 nation9.save
-
 
 
 athlete1 = Athlete.new({ 'name' => 'Usain Bolt', 'nation_id' => nation2.id})
