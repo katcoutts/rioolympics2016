@@ -5,7 +5,7 @@ require_relative('./nation.rb')
 require_relative('./event.rb')
 require_relative('./participation.rb')
 
-class Nation
+class Athlete
 
 attr_reader :name, :id, :nation_id
 
