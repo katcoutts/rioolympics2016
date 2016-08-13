@@ -50,7 +50,7 @@ athlete15 = Athlete.new({ 'name' => 'Matthew Glaetzer', 'nation_id' => nation7.i
 athlete16 = Athlete.new({ 'name' => 'Michael Phelps', 'nation_id' => nation5.id})
 athlete17 = Athlete.new({ 'name' => 'Masato Sakai', 'nation_id' => nation8.id})
 athlete18 = Athlete.new({ 'name' => 'Tamas Kenderesi', 'nation_id' => nation9.id})
-
+athlete19 = Athlete.new({ 'name' => 'Kevin Cordes', 'nation_id' => nation5.id})
 
 
 
@@ -72,6 +72,7 @@ athlete15.save
 athlete16.save
 athlete17.save
 athlete18.save
+athlete19.save
 
 event1 = Event.new({'name' => '100m sprint - Men', 'sport' => 'athletics', 'gold_id' => athlete1.id, 'silver_id' => athlete2.id, 'bronze_id' => athlete3.id })
 event2 = Event.new({'name' => 'Heptathlon - Women', 'sport' => 'athletics', 'gold_id' => athlete4.id, 'silver_id' => athlete5.id, 'bronze_id' => athlete6.id })
@@ -89,23 +90,48 @@ event6.save
 
 
 
-rental1 = Rental.new({'book_id' => book1.id, 'member_id' => member1.id})
-rental2 = Rental.new({'book_id' => book2.id, 'member_id' => member1.id})
-rental3 = Rental.new({'book_id' => book3.id, 'member_id' => member2.id})
-rental4 = Rental.new({'book_id' => book4.id, 'member_id' => member1.id})
-rental5 = Rental.new({'book_id' => book5.id, 'member_id' => member2.id})
-rental6 = Rental.new({'book_id' => book3.id, 'member_id' => member3.id})
-rental7 = Rental.new({'book_id' => book2.id, 'member_id' => member5.id})
-rental8 = Rental.new({'book_id' => book4.id, 'member_id' => member5.id})
+participation1 = Participation.new({'athlete_id' => athlete1.id, 'event_id' => event1.id})
+participation2 = Participation.new({'athlete_id' => athlete2.id, 'event_id' => event1.id})
+participation3 = Participation.new({'athlete_id' => athlete3.id, 'event_id' => event1.id})
+participation4 = Participation.new({'athlete_id' => athlete4.id, 'event_id' => event2.id})
+participation5 = Participation.new({'athlete_id' => athlete5.id, 'event_id' => event2.id})
+participation6 = Participation.new({'athlete_id' => athlete6.id, 'event_id' => event2.id})
+participation7 = Participation.new({'athlete_id' => athlete7.id, 'event_id' => event3.id})
+participation8 = Participation.new({'athlete_id' => athlete8.id, 'event_id' => event3.id})
+participation9 = Participation.new({'athlete_id' => athlete9.id, 'event_id' => event3.id})
+participation10 = Participation.new({'athlete_id' => athlete10.id, 'event_id' => event4.id})
+participation11 = Participation.new({'athlete_id' => athlete11.id, 'event_id' => event4.id})
+participation12 = Participation.new({'athlete_id' => athlete12.id, 'event_id' => event4.id})
+participation13 = Participation.new({'athlete_id' => athlete13.id, 'event_id' => event5.id})
+participation14 = Participation.new({'athlete_id' => athlete14.id, 'event_id' => event5.id})
+participation15 = Participation.new({'athlete_id' => athlete15.id, 'event_id' => event5.id})
+participation16 = Participation.new({'athlete_id' => athlete16.id, 'event_id' => event6.id})
+participation17 = Participation.new({'athlete_id' => athlete17.id, 'event_id' => event6.id})
+participation18 = Participation.new({'athlete_id' => athlete18.id, 'event_id' => event6.id})
+participation19 = Participation.new({'athlete_id' => athlete19.id, 'event_id' => event3.id})
 
-rental1.save
-rental2.save
-rental3.save
-rental4.save
-rental5.save
-rental6.save
-rental7.save
-rental8.save
+
+
+participation1.save
+participation2.save
+participation3.save
+participation4.save
+participation5.save
+participation6.save
+participation7.save
+participation8.save
+participation9.save
+participation10.save
+participation11.save
+participation12.save
+participation13.save
+participation14.save
+participation15.save
+participation16.save
+participation17.save
+participation18.save
+participation19.save
+
 
 binding.pry
 nil
