@@ -29,20 +29,20 @@ class Event
   #   return Athlete.map_items(sql)
   # end
 
-  # def gold_medalist()
-  #   sql = "SELECT * FROM athletes WHERE id = #{@gold_id}"
-  #   return Athlete.map_item(sql)
-  # end
+  def gold_medalist()
+    sql = "SELECT * FROM athletes WHERE id = #{@gold_id}"
+    return Athlete.map_item(sql)
+  end
 
-  # def silver_medalist()
-  #   sql = "SELECT * FROM athletes WHERE id = #{@silver_id}"
-  #   return Athlete.map_item(sql)
-  # end
+  def silver_medalist()
+    sql = "SELECT * FROM athletes WHERE id = #{@silver_id}"
+    return Athlete.map_item(sql)
+  end
 
-  # def bronze_medalist()
-  #   sql = "SELECT * FROM athletes WHERE id = #{@silver_id}"
-  #   return Athlete.map_item(sql)
-  # end
+  def bronze_medalist()
+    sql = "SELECT * FROM athletes WHERE id = #{@bronze_id}"
+    return Athlete.map_item(sql)
+  end
 
   def self.all()
     sql = "SELECT * FROM events"

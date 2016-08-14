@@ -1,0 +1,17 @@
+<h2>Add an event</h2>
+
+<form action="/events" method="post">
+  <label for="name">Name:</label> 
+  <input type="text" name="name"> 
+  &nbsp;
+  <label for="sport">Sport:</label>
+  <select name="sport"> 
+  <% @events.each do |event| %> 
+  <option value= "<%= event.sport%>"><%= event.sport.capitalize %></option>
+  <% end %>
+  </select>
+  &nbsp;
+  <input type="submit" value="Add Event">
+
+<!-- NB THIS WON'T WORK UNTIL WE CAN ADD GOLD-ID, SILVER-ID AND BRONZE-ID -->
+</form>

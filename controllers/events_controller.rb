@@ -7,23 +7,25 @@ get '/events' do
 end
 
 # # new
-# get '/athletes/new' do
-#   @nations = Nation.all()
-#   erb(:'athletes/new')
-# end
+get '/events/new' do
+  @events = Event.all()
+  erb(:'events/new')
+end
 
 # # create
-# post '/athletes' do
-#   @athlete = Athlete.new(params)
-#   @athlete.save
-#   redirect to( "athletes" )
-# end
+post '/events' do
+  @events = Event.all
+  @event = Event.new(params)
+  @event.save
+  redirect to( "events" )
+end
 
 # # SHOW
-# get '/athletes/:id' do 
-#   @athlete = Athlete.find(params['id'])
-#   erb(:'athletes/show')
-# end
+get '/events/:id' do 
+  @athletes = Athlete.all
+  @event = Event.find(params['id'])
+  erb(:'events/show')
+end
 
 # # EDIT
 # get '/athletes/:id/edit' do
