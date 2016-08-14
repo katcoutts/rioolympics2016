@@ -1,0 +1,17 @@
+<div>
+  <% @athletes.each do |athlete| %>
+  <a href="/athletes/<%= athlete.id  %>"><%= athlete.first_name %> <%= athlete.last_name %> </a><br><br>
+  <b>Nation:</b>&nbsp;
+  <a href="/nations/<%= athlete.nation.id %>"></a> <%= athlete.nation.name()  %><br><br>
+  <a href="/athletes/<%= athlete.id%> ">View</a><br><br>
+  <hr>
+  <% end %>
+  <br>
+  <br>
+ 
+  <!-- ACTUALLY ON THIS ONE IT MAY BE MORE SENSIBLE TO HAVE THE BUTTON TO ADD AN ATHLETE ELSEWHERE = OR MAYBE ONLY GET TO IT BY TYPING IT INTO THE BAR AS IT WOULDN'T BE A PUBLIC FACING ACTION -->
+  <a href="/athletes/new">Add an athlete</a><br>
+</div>
+
+<!-- would be nice to order in some way - maybe alphabetically to start with?? -->
+

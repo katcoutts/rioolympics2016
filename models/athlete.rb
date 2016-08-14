@@ -22,19 +22,19 @@ attr_reader :first_name, :last_name, :id, :nation_id
     @id = athlete['id']
   end
 
-  # def nation()
-  #   sql = "SELECT * FROM nations WHERE id = #{ @nation_id }"
-  #   nation = SqlRunner.run( sql ).first
-  #   result = Nation.new( nation ) 
-  #   return result
-  # end
+  def nation()
+    sql = "SELECT * FROM nations WHERE id = #{ @nation_id }"
+    nation = SqlRunner.run( sql ).first
+    result = Nation.new( nation ) 
+    return result
+  end
 
-  # def self.all()
-  #   sql = "SELECT * FROM athletes"
-  #   athletes = SqlRunner.run( sql )
-  #   result = athletes.map { |a| Athlete.new( a ) }
-  #   return result
-  # end
+  def self.all()
+    sql = "SELECT * FROM athletes"
+    athletes = SqlRunner.run( sql )
+    result = athletes.map { |a| Athlete.new( a ) }
+    return result
+  end
 
   # def self.find(id)
   #   sql = "SELECT * FROM atletes WHERE id = #{id}"
