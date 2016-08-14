@@ -9,7 +9,7 @@ end
 
 # create
 post '/athletes' do
-  @athlete = athlete.new(params)
+  @athlete = Athlete.new(params)
   @athlete.save
   redirect to( "athletes" )
 end
