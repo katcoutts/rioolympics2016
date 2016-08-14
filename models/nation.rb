@@ -25,12 +25,12 @@ attr_reader :name, :id
   #   return result
   # end
 
-  # def self.all()
-  #   sql = "SELECT * FROM nations"
-  #   nations = SqlRunner.run( sql )
-  #   result = nations.map { |n| Nation.new( n ) }
-  #   return result
-  # end
+  def self.all()
+    sql = "SELECT * FROM nations"
+    nations = SqlRunner.run( sql )
+    result = nations.map { |n| Nation.new( n ) }
+    return result
+  end
 
   # def self.find(id)
   #   sql = "SELECT * FROM nations WHERE id = #{id}"
