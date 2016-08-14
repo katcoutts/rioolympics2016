@@ -44,18 +44,18 @@ class Event
   #   return Athlete.map_item(sql)
   # end
 
-  # def self.all()
-  #   sql = "SELECT * FROM events"
-  #   events = SqlRunner.run( sql )
-  #   result = events.map { |e| Event.new( e ) }
-  #   return result
-  # end
+  def self.all()
+    sql = "SELECT * FROM events"
+    events = SqlRunner.run( sql )
+    result = events.map { |e| Event.new( e ) }
+    return result
+  end
 
-  # def self.find(id)
-  #   sql = "SELECT * FROM events WHERE id = #{id}"
-  #   event = SqlRunner.run(sql).first
-  #   return Event.new(event)
-  # end
+  def self.find(id)
+    sql = "SELECT * FROM events WHERE id = #{id}"
+    event = SqlRunner.run(sql).first
+    return Event.new(event)
+  end
 
   # def self.update(options)
   #   sql = "UPDATE events SET 

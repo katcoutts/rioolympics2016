@@ -1,0 +1,14 @@
+<div>
+  <% @events.each do |event| %>
+  <a href="/events/<%= event.id  %>"><%= event.name %></a><br><br>
+  <b>Sport:</b>&nbsp;
+  <%= event.sport.capitalize()  %><br><br>
+  <a href="/events/<%= event.id%> ">View</a><br><br>
+  <hr>
+  <% end %>
+  <br>
+  <br>
+ 
+  <!-- ACTUALLY ON THIS ONE IT MAY BE MORE SENSIBLE TO HAVE THE BUTTON TO ADD AN ATHLETE ELSEWHERE = OR MAYBE ONLY GET TO IT BY TYPING IT INTO THE BAR AS IT WOULDN'T BE A PUBLIC FACING ACTION -->
+  <a href="/events/new">Add an event</a><br>
+</div>
