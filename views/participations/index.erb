@@ -1,6 +1,6 @@
 <div>
   <% @participations.each do |participation| %>
-    Event: <%= participation.event.name  %>    Athlete: <%= participation.athlete.first_name  %> <%= participation.athlete.last_name  %><br><hr>
+    <b>Event:</b> <%= participation.event.name  %>&nbsp; &nbsp;  <b>Athlete:</b> <%= participation.athlete.first_name  %> <%= participation.athlete.last_name  %><br><hr>
   <% end %>
   <p></p>
   <a href="/participations/new">Add another participant</a>

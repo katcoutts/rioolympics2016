@@ -10,6 +10,20 @@ get '/participations' do
   erb(:'participations/index')
 end
 
+#new
+get '/participations/new' do
+  @events = Event.all()
+  @athletes = Athlete.all()
+  erb(:'participations/new')
+end
+
+
+post '/participations' do
+  participation = Participation.new(params)
+  participation.save()
+  redirect( to('/participations'))
+end
+
 # # # new
 # get '/events/new' do
 #   @events = Event.all()

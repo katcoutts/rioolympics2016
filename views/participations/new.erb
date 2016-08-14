@@ -1,0 +1,21 @@
+<h2>New event participant</h2>
+
+<form action="/participations" method="post">
+  <label for="event_id">Event:</label>
+  <select name="event_id"> 
+    <% @events.each do |event| %>
+    <option value= "<%= event.id%>"><%= event.name %></option> 
+    <% end %>
+  </select>
+  &nbsp;
+  <label for="athlete_id">Athlete:</label>
+  <select name="athlete_id"> 
+  <% @athletes.each do |athlete| %> 
+  <option value= "<%= athlete.id%>"><%= athlete.first_name %> <%= athlete.last_name %> </option> 
+  <% end %>
+  </select>
+  &nbsp;
+  <input type="submit" value="Add entry">
+
+
+</form>
