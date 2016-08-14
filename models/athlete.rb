@@ -36,11 +36,11 @@ attr_reader :first_name, :last_name, :id, :nation_id
     return result
   end
 
-  # def self.find(id)
-  #   sql = "SELECT * FROM atletes WHERE id = #{id}"
-  #   athlete = SqlRunner.run(sql).first
-  #   return Athlete.new(athlete)
-  # end
+  def self.find(id)
+    sql = "SELECT * FROM athletes WHERE id = #{id}"
+    athlete = SqlRunner.run(sql).first
+    return Athlete.new(athlete)
+  end
 
   # def self.update(options)
   #   sql = "UPDATE athletes SET 
