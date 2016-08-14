@@ -10,7 +10,8 @@ CREATE TABLE nations (
 );
 CREATE TABLE athletes (
   id serial4 primary key,
-  name VARCHAR(255),
+  first_name VARCHAR(255),
+  last_name VARCHAR(255),
   nation_id int4 references nations(id) ON DELETE CASCADE
 );
 

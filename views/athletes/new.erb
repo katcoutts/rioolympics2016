@@ -1,23 +1,19 @@
 <h2>Add an athlete</h2>
-<!-- when the form gets submitted we want it to go to /rentals and the method is post. It's a create action. -->
-<form action="/rentals" method="post">
-  <label for="book_id">Book:</label>
-  <select name="book_id"> 
-    <% @books.each do |book| %>
-    <!-- nb if you're getting a value you need to put the whole ruby bit in quotes. -->
-    <option value= "<%= book.id%>"><%= book.title %></option> 
-    <% end %>
-  </select>
+
+<form action="/athletes" method="post">
+  <label for="first_name">First name:</label> 
+  <input type="text" name="first_name"> 
+  <label for="last_name">Last name:</label> 
+  <input type="text" name="last_name">
   &nbsp;
-  <label for="member_id">Member:</label>
-  <select name="member_id"> 
-  <% @members.each do |member| %> 
-  <!-- nb below and in the value above we do want the = as we do want the value of that to render to the html - although it's not showing and the user isn't seeing it, the browser is still passing it in the html as we need it to pass on in the params. -->
-  <option value= "<%= member.id%>"><%= member.name %></option> 
+  <label for="nation_id">Nation:</label>
+  <select name="nation_id"> 
+  <% @nations.each do |nation| %> 
+  <option value= "<%= nation.id%>"><%= nation.name %></option>
   <% end %>
   </select>
   &nbsp;
-  <input type="submit" value="Add Rental!">
+  <input type="submit" value="Add Athlete">
 
 
 </form>
