@@ -1,0 +1,12 @@
+<h2>Athlete name:</h2><b><%= @participation.athlete.first_name %> <%= @participation.athlete.last_name  %></b>
+<h2>Event:</h2><b><%= @participation.event.name  %> </b><br>
+
+<h2>Athlete's nation:</h2><b><%= @participation.athlete.nation.name %></b><br><br>
+<a href="/participations/<%= @participation.id  %>/edit ">Edit</a>
+
+<p></p>
+
+<form action="/participations/<%= @participation.id  %>/delete" method="post">
+  <input type="submit" value="Delete">
+</form>
+</div>

@@ -1,6 +1,8 @@
 <div>
   <% @participations.each do |participation| %>
-    <b>Event:</b> <%= participation.event.name  %>&nbsp; &nbsp;  <b>Athlete:</b> <%= participation.athlete.first_name  %> <%= participation.athlete.last_name  %><br><hr>
+    <b>Event:</b> <%= participation.event.name  %>&nbsp; &nbsp;  <b>Athlete:</b> <%= participation.athlete.first_name  %> <%= participation.athlete.last_name  %><br><br>
+    <a href="/participations/<%= participation.id%> ">View</a><br><br>
+    <hr>
   <% end %>
   <p></p>
   <a href="/participations/new">Add another participant</a>

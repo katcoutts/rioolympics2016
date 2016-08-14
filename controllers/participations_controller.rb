@@ -17,33 +17,47 @@ get '/participations/new' do
   erb(:'participations/new')
 end
 
-
+# create
 post '/participations' do
   participation = Participation.new(params)
   participation.save()
   redirect( to('/participations'))
 end
 
-# # # new
-# get '/events/new' do
-#   @events = Event.all()
-#   erb(:'events/new')
-# end
+# show
+get '/participations/:id' do 
+  @athletes = Athlete.all
+  @events = Event.all
+  @participation = Participation.find(params['id'])
+  erb(:'participations/show')
+end
 
-# # # create
-# post '/events' do
-#   @events = Event.all
-#   @event = Event.new(params)
-#   @event.save
-#   redirect to( "events" )
-# end
+# EDIT
+get '/participations/:id/edit' do
+  @events = Event.all
+  @athletes = Athlete.all
+  @participations = Participation.all
+  @participation = Participation.find( params[:id] )
+  erb( :'participations/edit' )
+end
+
+# UPDATE
+post '/participations/:id' do
+  Participation.update(params)
+  redirect(to("/participations/#{params[:id]}"))
+end
+
+# # DESTROY
+post '/participations/:id/delete' do
+  Participation.destroy(params[:id])
+  redirect(to('/participations'))
+end
+
+
+
 
 # # # SHOW
-# get '/events/:id' do 
-#   @athletes = Athlete.all
-#   @event = Event.find(params['id'])
-#   erb(:'events/show')
-# end
+
 
 # # # EDIT
 # get '/events/:id/edit' do

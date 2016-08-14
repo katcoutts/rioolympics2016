@@ -39,10 +39,29 @@ class Participation
     return Participation.map_items(sql)
   end
 
+  def self.update(options)
+    sql = "UPDATE participations SET 
+            athlete_id = '#{options['athlete_id']}', event_id = '#{options['event_id']}'
+            WHERE id = #{options['id']};"
+    SqlRunner.run(sql)
+  end
+
+
+  def self.find(id)
+    sql = "SELECT * FROM participations WHERE id = #{id}"
+    participation = SqlRunner.run(sql).first
+    return Participation.new(participation)
+  end
+
   def self.delete_all()
     sql = "DELETE FROM participations"
     SqlRunner.run(sql)
   end
+
+  def self.destroy(id)
+    sql = "DELETE FROM participations WHERE id = #{id};"
+    SqlRunner.run(sql)
+  end 
 
   def self.map_items(sql)
     participations = SqlRunner.run(sql)
