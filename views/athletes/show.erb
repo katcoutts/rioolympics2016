@@ -1,6 +1,14 @@
 <h2><%= @athlete.first_name %> <%= @athlete.last_name %></h2><br>
 
 <b>Nation:</b><%= @athlete.nation.name %></p><br>
+
+<b>Events:</b><br>
+  <% @athlete.events.each do |event| %> 
+  <%= event.name %><br>
+  <% end %>
+  </select>
+<br>
+
 <a href="/athletes/<%= @athlete.id  %>/edit ">Edit</a>
 
 <p></p>

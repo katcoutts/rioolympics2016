@@ -89,11 +89,10 @@ attr_reader :first_name, :last_name, :id, :nation_id
   #     return totals
   #   end
 
-  #   def events()
-  #     sql = "SELECT e.* FROM events e INNER JOIN participations p on e.id = p.event_id WHERE p.athlete_id = #{@id};"
-  #   # COULD BE JUST ONE THING RETURNED HERE OR COULD BE MORE SO NOT SURE WHETHER MAP_ITEMS OR MAP_ITEM????
-  #    return Event.map_items(sql)
-  #   end
+    def events()
+      sql = "SELECT e.* FROM events e INNER JOIN participations p on e.id = p.event_id WHERE p.athlete_id = #{@id};"
+     return Event.map_items(sql)
+    end
 
 
   end
