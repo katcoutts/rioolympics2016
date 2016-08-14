@@ -26,17 +26,18 @@ get '/athletes/:id' do
   erb(:'athletes/show')
 end
 
-# # EDIT
-# get '/nations/:id/edit' do
-#   @nation = Nation.find( params[:id] )
-#   erb( :'nations/edit' )
-# end
+# EDIT
+get '/athletes/:id/edit' do
+  @athlete = Athlete.find( params[:id] )
+  @nations = Nation.all()
+  erb( :'athletes/edit' )
+end
 
 # # UPDATE
-# post '/nations/:id' do
-#   Nation.update(params)
-#   redirect(to("/nations/#{params[:id]}"))
-# end
+post '/athletes/:id' do
+  Athlete.update(params)
+  redirect(to("/athletes/#{params[:id]}"))
+end
 
 # # DESTROY
 # post '/nations/:id/delete' do
