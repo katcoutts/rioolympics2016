@@ -17,3 +17,23 @@ post '/nations' do
   @nation.save
   redirect to( "nations" )
 end
+
+# SHOW
+get '/nations/:id' do 
+  @nation = Nation.find(params['id'])
+  erb(:'nations/show')
+end
+
+# EDIT
+get '/nations/:id/edit' do
+  @nation = Nation.find( params[:id] )
+  erb( :'nations/edit' )
+end
+
+# UPDATE
+post '/nations/:id' do
+  Nation.update(params)
+  redirect(to("/nations/#{params[:id]}"))
+end
+
+# DELETE

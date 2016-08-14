@@ -32,18 +32,18 @@ attr_reader :name, :id
     return result
   end
 
-  # def self.find(id)
-  #   sql = "SELECT * FROM nations WHERE id = #{id}"
-  #   nation = SqlRunner.run(sql).first
-  #   return Nation.new(album)
-  # end
+  def self.find(id)
+    sql = "SELECT * FROM nations WHERE id = #{id}"
+    nation = SqlRunner.run(sql).first
+    return Nation.new(nation)
+  end
 
-  # def self.update(options)
-  #   sql = "UPDATE nations SET 
-  #           name = '#{options['name']}'
-  #           WHERE id = #{options['id']};"
-  #   SqlRunner.run(sql)
-  # end
+  def self.update(options)
+    sql = "UPDATE nations SET 
+            name = '#{options['name']}'
+            WHERE id = #{options['id']};"
+    SqlRunner.run(sql)
+  end
 
   # def self.destroy(id)
   #   sql = "DELETE FROM nations WHERE id = #{id};"
