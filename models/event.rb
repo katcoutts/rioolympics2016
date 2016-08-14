@@ -57,17 +57,17 @@ class Event
     return Event.new(event)
   end
 
-  # def self.update(options)
-  #   sql = "UPDATE events SET 
-  #           name = '#{options['name']}', sport = '#{options['sport']}', gold_id = '#{options['gold_id']}', silver_id = '#{options['silver_id']}', bronze_id = '#{options['bronze_id']}'
-  #           WHERE id = #{options['id']};"
-  #   SqlRunner.run(sql)
-  # end
+  def self.update(options)
+    sql = "UPDATE events SET 
+            name = '#{options['name']}', sport = '#{options['sport']}', gold_id = '#{options['gold_id']}', silver_id = '#{options['silver_id']}', bronze_id = '#{options['bronze_id']}'
+            WHERE id = #{options['id']};"
+    SqlRunner.run(sql)
+  end
 
-  # def self.destroy(id)
-  #   sql = "DELETE FROM events WHERE id = #{id};"
-  #   SqlRunner.run(sql)
-  # end 
+  def self.destroy(id)
+    sql = "DELETE FROM events WHERE id = #{id};"
+    SqlRunner.run(sql)
+  end 
 
   def self.delete_all()
     sql = "DELETE FROM events"
