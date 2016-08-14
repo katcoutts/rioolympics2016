@@ -8,6 +8,12 @@
 
 <b>Bronze medal winner:</b> <%= @event.bronze_medalist.first_name %> <%= @event.bronze_medalist.last_name %><br><br>
 
+<b>Participants:</b><br>
+  <% @event.athletes.each do |athlete| %> 
+  <%= athlete.first_name %> <%=athlete.last_name  %> from <%=athlete.nation.name  %><br>
+  <% end %>
+  </select>
+<br>
 <a href="/events/<%= @event.id %>/edit ">Edit</a>
 
 <p></p>

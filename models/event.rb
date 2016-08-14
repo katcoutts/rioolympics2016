@@ -24,10 +24,10 @@ class Event
   end
 
 
-  # def athletes()
-  #   sql = "SELECT a.* FROM athletes a INNER JOIN participations p on a.id = p.athlete_id WHERE r.event_id = #{@id};"
-  #   return Athlete.map_items(sql)
-  # end
+  def athletes()
+    sql = "SELECT a.* FROM athletes a INNER JOIN participations p on a.id = p.athlete_id WHERE p.event_id = #{@id};"
+    return Athlete.map_items(sql)
+  end
 
   def gold_medalist()
     sql = "SELECT * FROM athletes WHERE id = #{@gold_id}"

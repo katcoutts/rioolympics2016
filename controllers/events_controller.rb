@@ -1,4 +1,6 @@
 require_relative('../models/event')
+require_relative('../models/participation')
+require_relative('../models/athlete')
 
 
 # EVENTS CAN'T BE PROPERLY EDITED OR ADDED YET WITHOUT LETTING PEOPLE GIVE GOLD-ID, SILVER-ID AND BRONZE-ID BUT WE CAN'T DO THIS UNTIL PARTICIPATIONS IS SET UP AS USING THAT WE'LL BE ABLE TO DO A DROP DOWN OF ALL ATHLETES TAKING PART TO SELECT FROM.
@@ -27,6 +29,7 @@ end
 # # SHOW
 get '/events/:id' do 
   @athletes = Athlete.all
+  @participations = Participation.all
   @event = Event.find(params['id'])
   erb(:'events/show')
 end
