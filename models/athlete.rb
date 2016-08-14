@@ -75,19 +75,70 @@ attr_reader :first_name, :last_name, :id, :nation_id
   #   points = (medals.totals['gold'] * 5) + (medals.totals['silver'] * 3) + medals.totals['bronze']
   # end
 
-  # def medals()
-  #   totals = { 'gold' => 0, 'silver' => 0, 'bronze' => 0}
+  # def league_points()
+  #   points = (wins.count * 2) + draws.count
+  #   return points
+  # end
+
+  # def gold_medals()
+  #   gold_medals = 0
   #   events.each do |event|
-  #       if event.gold_id == @id
-  #         medals['gold'] += 1
-  #       elsif event.silver_id == @id
-  #         medals['silver'] += 1
-  #       elsif bronze_id == @id
-  #         medals['bronze_id'] += 1
-  #       end
+  #     if event.gold_id.to_i == @id
+  #       gold_medals += 1
   #     end
-  #     return totals
   #   end
+  #   return gold_medals
+  # end  
+
+    def gold_medals()
+    gold_medals = []
+    events.each do |event|
+      if event.gold_id.to_i == @id
+        gold_medals << event
+      end
+    end
+    return gold_medals
+  end  
+
+  # def silver_medals()
+  #   silver_medals = 0
+  #   events.each do |event|
+  #     if event.silver_id.to_i == @id
+  #       silver_medals += 1
+  #     end
+  #   end
+  #   return silver_medals
+  # end  
+
+  def silver_medals()
+    silver_medals = []
+    events.each do |event|
+      if event.silver_id.to_i == @id
+        silver_medals << event
+      end
+    end
+    return silver_medals
+  end  
+
+  # def bronze_medals()
+  #   bronze_medals = 0
+  #   events.each do |event|
+  #     if event.bronze_id.to_i == @id
+  #       bronze_medals += 1
+  #     end
+  #   end
+  #   return bronze_medals
+  # end  
+
+  def bronze_medals()
+    bronze_medals = []
+    events.each do |event|
+      if event.bronze_id.to_i == @id
+        bronze_medals << event
+      end
+    end
+    return bronze_medals
+  end
 
     def events()
       sql = "SELECT e.* FROM events e INNER JOIN participations p on e.id = p.event_id WHERE p.athlete_id = #{@id};"

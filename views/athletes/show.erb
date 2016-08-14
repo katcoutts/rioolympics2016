@@ -9,6 +9,12 @@
   </select>
 <br>
 
+<b>Medals:</b><br><br>
+<b>Gold Medals - <%= @athlete.gold_medals.count  %></b><br><br>
+<b>Silver Medals - <%= @athlete.silver_medals.count  %></b><br><br>
+<b>Bronze Medals - <%= @athlete.bronze_medals.count  %></b><br><br>
+  
+
 <a href="/athletes/<%= @athlete.id  %>/edit ">Edit</a>
 
 <p></p>

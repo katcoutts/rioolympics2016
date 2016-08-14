@@ -1,0 +1,6 @@
+<b>Events:</b><br>
+  <% @athlete.events.each do |event| %> 
+  <%= event.name %><br>
+  <% end %>
+  </select>
+<br>
