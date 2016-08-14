@@ -39,8 +39,8 @@ post '/athletes/:id' do
   redirect(to("/athletes/#{params[:id]}"))
 end
 
-# # DESTROY
-# post '/nations/:id/delete' do
-#   Nation.destroy(params[:id])
-#   redirect(to('/nations'))
-# end
+# DESTROY
+post '/athletes/:id/delete' do
+  Athlete.destroy(params[:id])
+  redirect(to('/athletes'))
+end

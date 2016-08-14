@@ -54,10 +54,10 @@ attr_reader :first_name, :last_name, :id, :nation_id
     SqlRunner.run(sql)
   end
 
-  # def self.destroy(id)
-  #   sql = "DELETE FROM athletes WHERE id = #{id};"
-  #   SqlRunner.run(sql)
-  # end 
+  def self.destroy(id)
+    sql = "DELETE FROM athletes WHERE id = #{id};"
+    SqlRunner.run(sql)
+  end 
 
   def self.map_items(sql)
     athletes = SqlRunner.run(sql)
