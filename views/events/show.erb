@@ -1,12 +1,12 @@
 <h2><%= @event.name %></h2><br>
 
-<b>Sport:</b><%= @event.sport.capitalize %></p><br>
+<b>Sport:</b>  <%= @event.sport.capitalize %></p><br>
 
-<b>Gold medal winner:</b> <%= @event.gold_medalist.first_name %> <%= @event.gold_medalist.last_name %> <br><br>
+<b>Gold medal winner:</b>  <%= @event.gold_medalist.first_name %> <%= @event.gold_medalist.last_name %> <br><br>
 
-<b>Silver medal winner:</b> <%= @event.silver_medalist.first_name %> <%= @event.silver_medalist.last_name %><br><br>
+<b>Silver medal winner:</b>  <%= @event.silver_medalist.first_name %> <%= @event.silver_medalist.last_name %><br><br>
 
-<b>Bronze medal winner:</b> <%= @event.bronze_medalist.first_name %> <%= @event.bronze_medalist.last_name %><br><br>
+<b>Bronze medal winner:</b>  <%= @event.bronze_medalist.first_name %> <%= @event.bronze_medalist.last_name %><br><br>
 
 <b>Participants:</b><br>
   <% @event.athletes.each do |athlete| %> 
