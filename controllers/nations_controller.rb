@@ -2,7 +2,7 @@ require_relative('../models/nation')
 
 # INDEX
 get '/nations' do
-  @nations = Nation.all
+  @nations = Nation.all.sort_by { |k| k.name}
   erb(:'nations/index')
 end
 

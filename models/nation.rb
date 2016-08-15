@@ -41,7 +41,8 @@ attr_reader :name, :id, :flag
 
   def self.update(options)
     sql = "UPDATE nations SET 
-            name = '#{options['name']}'
+            name = '#{options['name']}',
+            flag = '#{options['flag']}'
             WHERE id = #{options['id']};"
     SqlRunner.run(sql)
   end
