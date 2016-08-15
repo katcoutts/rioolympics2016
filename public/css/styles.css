@@ -1,8 +1,25 @@
-body {
+html, body {
   background: url('../images/brazil_image.jpg') no-repeat center center fixed;
-  font-family: "Arial Black", Gadget, sans-serif; }
+  font-family: "Arial Black", Gadget, sans-serif; 
+  width: 100%;}
 
 h1 {
   color: #FFBC42;
   font-size: 60px;
 }
+
+table, td, th {
+    border: 2px solid black;
+    padding: auto, 0;
+}
+
+table {
+  background-color: rgba(90, 131, 181, 0.4);
+  margin: 0 auto;
+}
+
+th, td {
+  text-align: center;
+  padding: 15px; 
+}
+
