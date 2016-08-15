@@ -4,18 +4,21 @@
 <img src="<%= @nation.flag %>" class="flag">
 
 <h3>Athletes:</h3>
-<% @nation.athletes.each do |athlete|  %>
+</a> <% @nation.athletes.each do |athlete|  %>
 <!-- PUT IT SO YOU CAN CLICK ON THE ATHLETE'S NAME AND LINKS TO THEIR PAGES. -->
-  <p><a href="/athletes/<%=athlete.id%>"><%= athlete.first_name %> <%= athlete.last_name  %></a></p>
+  <p><a href="/athletes/<%=athlete.id%>"><%= athlete.first_name %> <%= athlete.last_name  %></a> : &nbsp; 
+  <%athlete.events.each do |event|  %>
+  <%= event.name  %>,&nbsp;
+  <% end %> </p>
   <% end %>
 <br>
-<br>
+
 
 <p><b>Gold Medals:</b>  <span class="gold"><%= @nation.nation_gold_medals.count  %></span> </p>
 <p><b>Silver Medals:</b>  <span class="silver"><%= @nation.nation_silver_medals.count  %> </span>  </p>
-<p><b>Bronze Medals:</b>  <span class="bronze"><%= @nation.nation_bronze_medals.count  %> </span>  </p><br><br>
+<p><b>Bronze Medals:</b>  <span class="bronze"><%= @nation.nation_bronze_medals.count  %> </span>  </p><br>
 
-<p><b>Points:</b> <%= @nation.nation_points  %>  </p>
+<p><b>Points:</b> <%= @nation.nation_points  %>  </p><br>
 
 <p><a href="/nations/<%= @nation.id  %>/edit ">Edit</a></p>
 
