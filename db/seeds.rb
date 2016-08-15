@@ -3,6 +3,7 @@ require_relative('../models/athlete.rb')
 require_relative('../models/event.rb')
 require_relative('../models/nation.rb')
 require_relative('../models/participation.rb')
+require_relative('../models/standing.rb')
 
 Athlete.delete_all()
 Event.delete_all()
@@ -131,6 +132,7 @@ participation17.save
 participation18.save
 participation19.save
 
+standing1 = Standing.new()
 
 binding.pry
 nil
