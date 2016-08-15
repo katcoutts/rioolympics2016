@@ -1,18 +1,18 @@
 <table>
   <thead>
     <tr>
-      <th>Nation</th>
-      <th>Gold Medals</th> 
-      <th>Silver Medals</th>
-      <th>Bronze Medals</th>
-      <th>Points</th>
+      <b><th>Nation</th></b> 
+      <b><th>Gold Medals</th></b>
+      <b><th>Silver Medals</th></b>
+      <b><th>Bronze Medals</th></b>
+      <b><th>Points</th></b>
     </tr>
   </thead>
   <tbody>
   <% standings = @standing.order_by_points %>
   <% standings.each do |country| %>
     <tr>
-      <td><%= country[:name]%> </td> 
+      <td> <a href="/nations/<%=country[:id]%>"><%= country[:name]%></a>  </td> 
       <td><%= country[:gold_medals]%> </td> 
       <td><%= country[:silver_medals]%> </td> 
       <td><%= country[:bronze_medals]%> </td> 

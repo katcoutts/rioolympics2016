@@ -6,6 +6,9 @@ html, body {
 h1 {
   color: #FFBC42;
   font-size: 60px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  display: inline-block;
+  float: left;
 }
 
 table, td, th {
@@ -15,11 +18,45 @@ table, td, th {
 
 table {
   background-color: rgba(90, 131, 181, 0.4);
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 th, td {
   text-align: center;
   padding: 15px; 
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+  display: inline-block;
+  float: right;
+  padding: 20px;
+  background-color: #218380;
+  margin-right: 20px;
+  margin-top: 60px;
+  border-radius: 20%;
+}
+
+li {
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #D81159;
+}
+
+header {
+  height: 150px;
+
 }
 
