@@ -3,10 +3,17 @@
 
 <h2>Athletes:</h2>
 <% @nation.athletes.each do |athlete|  %>
+<!-- PUT IT SO YOU CAN CLICK ON THE ATHLETE'S NAME AND LINKS TO THEIR PAGES. -->
   <%= athlete.first_name %> <%= athlete.last_name  %> <br>
   <% end %>
 <br>
+<br>
 
+<p><b>Gold Medals:</b>    <%= @nation.nation_gold_medals.count  %> </p>
+<p><b>Silver Medals:</b>    <%= @nation.nation_silver_medals.count  %> </p>
+<p><b>Bronze Medals:</b>    <%= @nation.nation_bronze_medals.count  %> </p>
+
+<a href="/nations/<%= @nation.id  %>/edit ">Edit</a>
 
 <p></p>
 

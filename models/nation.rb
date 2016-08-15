@@ -58,7 +58,40 @@ attr_reader :name, :id
   # def points
   # end
 
-  # def medals
+  def nation_gold_medals
+    gold_medal_count = []
+    athletes.each do |athlete|
+      if athlete.gold_medals != []
+      gold_medal_count << athlete.gold_medals
+    end
+    end
+    return gold_medal_count
+  end
+
+  def nation_silver_medals
+    silver_medal_count = []
+    athletes.each do |athlete|
+      if athlete.silver_medals != []
+      silver_medal_count << athlete.silver_medals
+    end
+    end
+    return silver_medal_count
+  end
+
+  def nation_bronze_medals
+    bronze_medal_count = []
+    athletes.each do |athlete|
+      if athlete.bronze_medals != []
+      bronze_medal_count << athlete.bronze_medals
+    end
+    end
+    return bronze_medal_count
+  end
+
+  # def nation_silver_medals
+  # end
+
+  # def nation_bronze_medals
   # end
 
   # def events
