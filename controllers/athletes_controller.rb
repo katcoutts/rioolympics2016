@@ -3,7 +3,7 @@ require_relative('../models/nation.rb')
 
 # index
 get '/athletes' do
-  @athletes = Athlete.all
+  @athletes = Athlete.all.sort_by { |k| k.last_name}
   erb(:'athletes/index')
 end
 
