@@ -82,15 +82,15 @@ class Athlete
   #   return points
   # end
 
-  # def gold_medals()
-  #   gold_medals = 0
-  #   events.each do |event|
-  #     if event.gold_id.to_i == @id
-  #       gold_medals += 1
-  #     end
-  #   end
-  #   return gold_medals
-  # end  
+  def gold_medals_count()
+    gold_medals = 0
+    events.each do |event|
+      if event.gold_id.to_i == @id
+        gold_medals += 1
+      end
+    end
+    return gold_medals
+  end  
 
   def gold_medals()
     gold_medals = []
@@ -102,15 +102,15 @@ class Athlete
     return gold_medals
   end  
 
-  # def silver_medals()
-  #   silver_medals = 0
-  #   events.each do |event|
-  #     if event.silver_id.to_i == @id
-  #       silver_medals += 1
-  #     end
-  #   end
-  #   return silver_medals
-  # end  
+  def silver_medals_count()
+    silver_medals = 0
+    events.each do |event|
+      if event.silver_id.to_i == @id
+        silver_medals += 1
+      end
+    end
+    return silver_medals
+  end  
 
   def silver_medals()
     silver_medals = []
@@ -122,15 +122,15 @@ class Athlete
     return silver_medals
   end  
 
-  # def bronze_medals()
-  #   bronze_medals = 0
-  #   events.each do |event|
-  #     if event.bronze_id.to_i == @id
-  #       bronze_medals += 1
-  #     end
-  #   end
-  #   return bronze_medals
-  # end  
+  def bronze_medals_count()
+    bronze_medals = 0
+    events.each do |event|
+      if event.bronze_id.to_i == @id
+        bronze_medals += 1
+      end
+    end
+    return bronze_medals
+  end  
 
   def bronze_medals()
     bronze_medals = []
