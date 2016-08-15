@@ -55,8 +55,13 @@ attr_reader :name, :id
     SqlRunner.run(sql)
   end
 
-  # def points
-  # end
+  def nation_points
+    nation_points = 0
+    athletes.each do |athlete|
+      nation_points += athlete.points
+    end
+    return nation_points
+  end
 
   def nation_gold_medals
     gold_medal_count = []
@@ -88,11 +93,7 @@ attr_reader :name, :id
     return bronze_medal_count
   end
 
-  # def nation_silver_medals
-  # end
-
-  # def nation_bronze_medals
-  # end
+  
 
   # def events
   # end

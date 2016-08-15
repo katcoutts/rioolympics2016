@@ -71,7 +71,8 @@ attr_reader :first_name, :last_name, :id, :nation_id
   end
 
   def points()
-    total = (gold_medals.count * 5) + (silver_medals.count * 3) + bronze_medals.count
+    total = 0
+    total += (gold_medals.count * 5) + (silver_medals.count * 3) + bronze_medals.count
     return total
   end
 
