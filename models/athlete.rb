@@ -42,6 +42,7 @@ attr_reader :first_name, :last_name, :id, :nation_id
     return Athlete.new(athlete)
   end
 
+
   def self.update(options)
     sql = "UPDATE athletes SET 
             first_name = '#{options['first_name']}', last_name = '#{options['last_name']}', nation_id = '#{options['nation_id']}'

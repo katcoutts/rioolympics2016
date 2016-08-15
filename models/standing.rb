@@ -28,43 +28,19 @@ class Standing
                                           k[:gold_medals],
                                           k[:silver_medals],
                                           k[:bronze_medals]]}
+    
     return sorted.reverse
   end
 
 
-  def print_table
-    tp order_by_points
-  end
-
+                                     
 
 end
 
+# BELOW IS ANOTHER WAY OF SORTING BY MULTIPLE THINGS WHICH IS WORKING.
+# sorted = nation_points.sort { |a, b| [a[:points], a[:gold_medals], a[:silver_medals], a[:bronze_medals]] <=> [b[:points], b[:gold_medals], b[:silver_medals], b[:bronze_medals]] }
 
 
 # binding.pry
 # nil
-
-#   def team_positions()
-#     team_points = []
-#     @teams.each do |team|
-#       team_points << ({name: team.name, points: team.league_points})
-#     end
-#     sorted = team_points.sort_by { |k| k[:points]}
-#     return sorted.reverse
-#   end
-
-#   def league_topper()
-#     team_positions.first
-#   end
-
-# # NB NEED TO ADD IN SOMETHING HERE THAT WOULD TAKE INTO ACCOUNT POINTS DIFFERENCE IF MULTIPLE TEAMS HAVE THE SAME NUMBER OF LEAGUE POINTS.
-
-#   def league_table_info()
-#     league_table = []
-#     @teams.each do |team|
-#       league_table << ({position: table_position(team), name: team.name, wins: team.wins.count, losses: team.losses.count, draws: team.draws.count, points_for: team.total_points_scored, points_against: team.total_points_conceded, points_difference: team.points_difference, league_points: team.league_points})
-#     end
-#     sorted = league_table.sort_by { |k| k[:league_points]}
-#     return sorted.reverse
-#   end
 
