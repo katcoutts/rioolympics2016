@@ -37,7 +37,7 @@ button {
   float: right;
   padding: 20px;
   background-color: #FFDE00;
-  margin-right: 20px;
+  margin-right: 60px;
   margin-top: 60px;
   border-radius: 20%;
 }
@@ -62,7 +62,7 @@ h2 {
 }
 
 header {
-  height: 180px;
+  height: 210px;
 }
 
 .gold {
@@ -75,6 +75,10 @@ header {
 
 .bronze {
   color: #CD7F32;
+}
+
+.points{
+  color: tomato;
 }
 
 img {
@@ -119,5 +123,11 @@ h3{
   margin-left: -60px;
 }
 
-
+.logo {
+  float: left;
+  height: 150px;
+  width: 300px;
+  margin-left: 100px;
+  margin-top: 40px;
+}
 

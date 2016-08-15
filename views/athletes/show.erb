@@ -2,9 +2,9 @@
 <!-- <img src="https://ssl.gstatic.com/onebox/media/olympics/photos/o16/live/MTZSPDEC8FXJ572I_1536x864.JPG"> -->
 <b>Nation:</b><%= @athlete.nation.name %></p><br>
 
-<b>Events:</b><br>
+<b>Events:</b><br><br>
 <% @athlete.events.each do |event| %> 
-<%= event.name %><br>
+<%= event.name %><br><br>
 <% end %>
 </select>
 <br>
