@@ -1,28 +1,28 @@
 <div>
-<h1><%= @nation.name %></h1>
+<h2><%= @nation.name %></h2>
 
-<img src="<%= @nation.flag %>">
+<img src="<%= @nation.flag %>" class="flag">
 
-<h2>Athletes:</h2>
+<h3>Athletes:</h3>
 <% @nation.athletes.each do |athlete|  %>
 <!-- PUT IT SO YOU CAN CLICK ON THE ATHLETE'S NAME AND LINKS TO THEIR PAGES. -->
-  <%= athlete.first_name %> <%= athlete.last_name  %> <br>
+  <p><a href="/athletes/<%=athlete.id%>"><%= athlete.first_name %> <%= athlete.last_name  %></a></p>
   <% end %>
 <br>
 <br>
 
-<p><b>Gold Medals:</b>    <%= @nation.nation_gold_medals.count  %> </p>
-<p><b>Silver Medals:</b>    <%= @nation.nation_silver_medals.count  %> </p>
-<p><b>Bronze Medals:</b>    <%= @nation.nation_bronze_medals.count  %> </p>
+<p><b>Gold Medals:</b>  <span class="gold"><%= @nation.nation_gold_medals.count  %></span> </p>
+<p><b>Silver Medals:</b>  <span class="silver"><%= @nation.nation_silver_medals.count  %> </span>  </p>
+<p><b>Bronze Medals:</b>  <span class="bronze"><%= @nation.nation_bronze_medals.count  %> </span>  </p><br><br>
 
 <p><b>Points:</b> <%= @nation.nation_points  %>  </p>
 
-<a href="/nations/<%= @nation.id  %>/edit ">Edit</a>
+<p><a href="/nations/<%= @nation.id  %>/edit ">Edit</a></p>
 
 <p></p>
 
 <form action="/nations/<%= @nation.id  %>/delete" method="post">
-  <input type="submit" value="Delete">
+  <span class="delete"><input type="submit" value="Delete"></span>
 </form>
 </div>
 

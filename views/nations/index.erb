@@ -1,6 +1,6 @@
 <div>
 <% @nations.each do |nation| %>
-  <a href="/nations/<%= nation.id  %>"><%= nation.name %></a><br><br>
+<img src="<%= nation.flag %>" class="wee_flag"%> <a href="/nations/<%= nation.id  %>" class="nation_name"><%= nation.name %></a><br><br><br>
 <% end %>
 <br>
 <br>

@@ -12,10 +12,10 @@
   <% standings = @standing.order_by_points %>
   <% standings.each do |country| %>
     <tr>
-      <td> <a href="/nations/<%=country[:id]%>"><%= country[:name]%></a>  </td> 
-      <td><%= country[:gold_medals]%> </td> 
-      <td><%= country[:silver_medals]%> </td> 
-      <td><%= country[:bronze_medals]%> </td> 
+      <td><img src="<%= country[:flag] %>" class="wee_flag"%> <a href="/nations/<%=country[:id]%>" class="country"><%= country[:name]%></a></td> 
+      <td><span class="gold"><%= country[:gold_medals]%></span></td> 
+      <td><span class="silver"><%= country[:silver_medals]%></span></td> 
+      <td><span class="bronze"><%= country[:bronze_medals]%></span></td> 
       <td><%= country[:points]%> </td> 
     </tr> 
   <% end %>  
