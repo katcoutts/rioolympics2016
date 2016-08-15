@@ -1,4 +1,5 @@
 require('pry-byebug')
+require('table_print')
 
 require_relative('./athlete.rb')
 require_relative('./nation.rb')
@@ -23,11 +24,22 @@ class Standing
     @nations.each do |nation|
       nation_points << ({name: nation.name, gold_medals: nation.nation_gold_medals.count, silver_medals: nation.nation_silver_medals.count, bronze_medals: nation.nation_bronze_medals.count, points: nation.nation_points})
     end
-    sorted = nation_points.sort_by { |k| k[:points]}
+    sorted = nation_points.sort_by { |k| [k[:points],
+                                          k[:gold_medals],
+                                          k[:silver_medals],
+                                          k[:bronze_medals]]}
     return sorted.reverse
   end
 
+
+  def print_table
+    tp order_by_points
+  end
+
+
 end
+
+
 
 # binding.pry
 # nil
