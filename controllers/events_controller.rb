@@ -15,6 +15,7 @@ end
 # # new
 get '/events/new' do
   @events = Event.all()
+  @athletes = Athlete.all()
   erb(:'events/new')
 end
 

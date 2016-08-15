@@ -3,17 +3,17 @@
 <b>Nation:</b><%= @athlete.nation.name %></p><br>
 
 <b>Events:</b><br>
-  <% @athlete.events.each do |event| %> 
-  <%= event.name %><br>
-  <% end %>
-  </select>
+<% @athlete.events.each do |event| %> 
+<%= event.name %><br>
+<% end %>
+</select>
 <br>
 
 <b>Medals:</b><br><br>
 <b>Gold Medals - <%= @athlete.gold_medals.count  %></b><br><br>
 <b>Silver Medals - <%= @athlete.silver_medals.count  %></b><br><br>
 <b>Bronze Medals - <%= @athlete.bronze_medals.count  %></b><br><br>
-  
+
 <b>Points:</b> <%= @athlete.points %><br><br>
 
 <a href="/athletes/<%= @athlete.id  %>/edit ">Edit</a>

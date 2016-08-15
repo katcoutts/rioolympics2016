@@ -8,9 +8,9 @@
   &nbsp;
   <label for="nation_id">Nation:</label>
   <select name="nation_id"> 
-  <% @nations.each do |nation| %> 
-  <option value= "<%= nation.id%>"><%= nation.name %></option>
-  <% end %>
+    <% @nations.each do |nation| %> 
+    <option value= "<%= nation.id%>"><%= nation.name %></option>
+    <% end %>
   </select>
   &nbsp;
   <input type="submit" value="Add Athlete">

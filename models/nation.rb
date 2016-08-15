@@ -5,7 +5,7 @@ require_relative('./athlete.rb')
 
 class Nation
 
-attr_reader :name, :id, :flag
+  attr_reader :name, :id, :flag
 
   def initialize(options)
     @id = options['id'].to_i
@@ -41,9 +41,9 @@ attr_reader :name, :id, :flag
 
   def self.update(options)
     sql = "UPDATE nations SET 
-            name = '#{options['name']}',
-            flag = '#{options['flag']}'
-            WHERE id = #{options['id']};"
+    name = '#{options['name']}',
+    flag = '#{options['flag']}'
+    WHERE id = #{options['id']};"
     SqlRunner.run(sql)
   end
 
@@ -69,8 +69,8 @@ attr_reader :name, :id, :flag
     gold_medal_count = []
     athletes.each do |athlete|
       if athlete.gold_medals != []
-      gold_medal_count << athlete.gold_medals
-    end
+        gold_medal_count << athlete.gold_medals
+      end
     end
     return gold_medal_count
   end
@@ -79,8 +79,8 @@ attr_reader :name, :id, :flag
     silver_medal_count = []
     athletes.each do |athlete|
       if athlete.silver_medals != []
-      silver_medal_count << athlete.silver_medals
-    end
+        silver_medal_count << athlete.silver_medals
+      end
     end
     return silver_medal_count
   end
@@ -89,8 +89,8 @@ attr_reader :name, :id, :flag
     bronze_medal_count = []
     athletes.each do |athlete|
       if athlete.bronze_medals != []
-      bronze_medal_count << athlete.bronze_medals
-    end
+        bronze_medal_count << athlete.bronze_medals
+      end
     end
     return bronze_medal_count
   end

@@ -6,8 +6,29 @@
   &nbsp;
   <label for="sport">Sport:</label>
   <select name="sport"> 
-  <% @events.each do |event| %> 
-  <option value= "<%= event.sport%>"><%= event.sport.capitalize %></option>
+  <option value= "Rowing">Rowing </option>
+  <option value= "Athletics">Athletics </option>
+  <option value= "Gymnastics">Gymnastics </option>
+  <option value= "Cycling">Cycling </option>
+  <option value= "Tennis">Tennis </option>
+  </select>
+  &nbsp;
+  <label for="gold_id">Gold medal athlete:</label>
+  <select name="gold_id"> 
+  <% @athletes.each do |athlete| %> 
+  <option value= "<%= athlete.id%>"><%= athlete.first_name %> <%= athlete.last_name %> </option> 
+  <% end %>
+  </select>
+  &nbsp; <label for="silver_id">Silver medal athlete:</label>
+  <select name="silver_id"> 
+  <% @athletes.each do |athlete| %> 
+  <option value= "<%= athlete.id%>"><%= athlete.first_name %> <%= athlete.last_name %> </option> 
+  <% end %>
+  </select>
+  &nbsp; <label for="bronze_id">Bronze medal athlete:</label>
+  <select name="bronze_id"> 
+  <% @athletes.each do |athlete| %> 
+  <option value= "<%= athlete.id%>"><%= athlete.first_name %> <%= athlete.last_name %> </option> 
   <% end %>
   </select>
   &nbsp;

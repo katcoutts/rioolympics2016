@@ -7,7 +7,7 @@ require_relative('./participation.rb')
 
 class Athlete
 
-attr_reader :first_name, :last_name, :id, :nation_id
+  attr_reader :first_name, :last_name, :id, :nation_id
 
   def initialize(options)
     @id = options['id'].to_i
@@ -45,8 +45,8 @@ attr_reader :first_name, :last_name, :id, :nation_id
 
   def self.update(options)
     sql = "UPDATE athletes SET 
-            first_name = '#{options['first_name']}', last_name = '#{options['last_name']}', nation_id = '#{options['nation_id']}'
-            WHERE id = #{options['id']};"
+    first_name = '#{options['first_name']}', last_name = '#{options['last_name']}', nation_id = '#{options['nation_id']}'
+    WHERE id = #{options['id']};"
     SqlRunner.run(sql)
   end
   
@@ -92,7 +92,7 @@ attr_reader :first_name, :last_name, :id, :nation_id
   #   return gold_medals
   # end  
 
-    def gold_medals()
+  def gold_medals()
     gold_medals = []
     events.each do |event|
       if event.gold_id.to_i == @id
@@ -142,13 +142,13 @@ attr_reader :first_name, :last_name, :id, :nation_id
     return bronze_medals
   end
 
-    def events()
-      sql = "SELECT e.* FROM events e INNER JOIN participations p on e.id = p.event_id WHERE p.athlete_id = #{@id};"
-     return Event.map_items(sql)
-    end
-
-
+  def events()
+    sql = "SELECT e.* FROM events e INNER JOIN participations p on e.id = p.event_id WHERE p.athlete_id = #{@id};"
+    return Event.map_items(sql)
   end
+
+
+end
 
 
 

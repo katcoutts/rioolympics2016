@@ -41,8 +41,8 @@ class Participation
 
   def self.update(options)
     sql = "UPDATE participations SET 
-            athlete_id = '#{options['athlete_id']}', event_id = '#{options['event_id']}'
-            WHERE id = #{options['id']};"
+    athlete_id = '#{options['athlete_id']}', event_id = '#{options['event_id']}'
+    WHERE id = #{options['id']};"
     SqlRunner.run(sql)
   end
 

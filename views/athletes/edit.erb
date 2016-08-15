@@ -8,7 +8,7 @@
   <label for="nation_id">Select a nation:</label>
   <select name="nation_id">
     <% @nations.each do |nation| %>
-      <option value="<%= nation.id %>"><%= nation.name %></option>
+    <option value="<%= nation.id %>"><%= nation.name %></option>
     <% end %>
   </select>
   
