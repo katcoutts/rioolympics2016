@@ -5,15 +5,16 @@ require_relative('./athlete.rb')
 
 class Nation
 
-attr_reader :name, :id
+attr_reader :name, :id, :flag
 
   def initialize(options)
     @id = options['id'].to_i
     @name = options['name']
+    @flag = options['flag']
   end
 
   def save()
-    sql = "INSERT INTO nations (name) VALUES ('#{ @name }') RETURNING *"
+    sql = "INSERT INTO nations (name, flag) VALUES ('#{ @name }', '#{ @flag }') RETURNING *"
     nation = SqlRunner.run( sql ).first
     @id = nation['id']
   end

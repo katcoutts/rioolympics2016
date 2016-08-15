@@ -1,6 +1,8 @@
 <div>
 <h1><%= @nation.name %></h1>
 
+<img src="<%= @nation.flag %>">
+
 <h2>Athletes:</h2>
 <% @nation.athletes.each do |athlete|  %>
 <!-- PUT IT SO YOU CAN CLICK ON THE ATHLETE'S NAME AND LINKS TO THEIR PAGES. -->

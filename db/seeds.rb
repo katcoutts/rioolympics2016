@@ -11,15 +11,15 @@ Participation.delete_all()
 Nation.delete_all()
 
 
-nation1 = Nation.new({ 'name' => 'Great Britain'})
-nation2 = Nation.new({ 'name' => 'Jamaica'})
-nation3 = Nation.new({ 'name' => 'Belgium'})
-nation4 = Nation.new({ 'name' => 'South Africa'})
-nation5 = Nation.new({ 'name' => 'United States'})
-nation6 = Nation.new({ 'name' => 'Russia'})
-nation7 = Nation.new({ 'name' => 'Australia'})
-nation8 = Nation.new({ 'name' => 'Japan'})
-nation9 = Nation.new({ 'name' => 'Hungary'})
+nation1 = Nation.new({ 'name' => 'Great Britain', 'flag' => 'http://www.flags.net/images/largeflags/UNKG0001.GIF'})
+nation2 = Nation.new({ 'name' => 'Jamaica', 'flag' => 'http://www.flags.net/images/largeflags/JAMA0001.GIF'})
+nation3 = Nation.new({ 'name' => 'Belgium', 'flag' => 'http://www.flags.net/images/largeflags/BELG0003.GIF'})
+nation4 = Nation.new({ 'name' => 'South Africa', 'flag' => 'http://www.flags.net/images/largeflags/SOAF0001.GIF'})
+nation5 = Nation.new({ 'name' => 'United States', 'flag' => 'http://www.flags.net/images/largeflags/UNST0001.GIF'})
+nation6 = Nation.new({ 'name' => 'Russia', 'flag' => 'http://www.flags.net/images/largeflags/RUSS0001.GIF'})
+nation7 = Nation.new({ 'name' => 'Australia', 'flag' => 'http://www.flags.net/images/largeflags/ASTL0001.GIF'})
+nation8 = Nation.new({ 'name' => 'Japan', 'flag' => 'http://www.flags.net/images/largeflags/JAPA0001.GIF'})
+nation9 = Nation.new({ 'name' => 'Hungary', 'flag' => 'http://www.flags.net/images/largeflags/HUNG0001.GIF'})
 
 nation1.save
 nation2.save

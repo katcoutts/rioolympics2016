@@ -6,7 +6,8 @@ DROP TABLE nations;
 
 CREATE TABLE nations (
   id serial4 primary key,
-  name VARCHAR(255)
+  name VARCHAR(255),
+  flag VARCHAR(255)
 );
 CREATE TABLE athletes (
   id serial4 primary key,
