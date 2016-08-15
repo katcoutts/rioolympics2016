@@ -1,6 +1,12 @@
 <div>
 <h1><%= @nation.name %></h1>
 
+<h2>Athletes:</h2>
+<% @nation.athletes.each do |athlete|  %>
+  <%= athlete.first_name %> <%= athlete.last_name  %> <br>
+  <% end %>
+<br>
+
 
 <p></p>
 

@@ -18,12 +18,12 @@ attr_reader :name, :id
     @id = nation['id']
   end
 
-  # def athletes()
-  #   sql = "SELECT * FROM athletes WHERE nation_id = #{ @id }"
-  #   athletes = SqlRunner.run( sql )
-  #   result = athletes.map { |a| Athlete.new( a ) }
-  #   return result
-  # end
+  def athletes()
+    sql = "SELECT * FROM athletes WHERE nation_id = #{ @id }"
+    athletes = SqlRunner.run( sql )
+    result = athletes.map { |a| Athlete.new( a ) }
+    return result
+  end
 
   def self.all()
     sql = "SELECT * FROM nations"

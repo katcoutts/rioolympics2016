@@ -70,10 +70,10 @@ attr_reader :first_name, :last_name, :id, :nation_id
     return result.first
   end
 
-  # def points()
-  #   # NOT SURE THE BELOW IS THE RIGHT WAY TO WRITE THIS.
-  #   points = (medals.totals['gold'] * 5) + (medals.totals['silver'] * 3) + medals.totals['bronze']
-  # end
+  def points()
+    total = (gold_medals.count * 5) + (silver_medals.count * 3) + bronze_medals.count
+    return total
+  end
 
   # def league_points()
   #   points = (wins.count * 2) + draws.count
