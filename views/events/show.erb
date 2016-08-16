@@ -1,21 +1,34 @@
+
+<div class="event-content">
 <h2><%= @event.name %></h2><br>
 
-<b>Sport:</b>  <%= @event.sport.capitalize %></p><br>
+<b>Sport:</b>  <%= @event.sport.capitalize %></p>
 
-<b>Gold medal winner:</b> <span class="gold"><%= @event.gold_medalist.first_name %> <%= @event.gold_medalist.last_name %></span>  <br><br>
-
-<b>Silver medal winner:</b> <span class="silver"><%= @event.silver_medalist.first_name %> <%= @event.silver_medalist.last_name %></span><br><br>
-
-<b>Bronze medal winner:</b> <span class="bronze"><%= @event.bronze_medalist.first_name %> <%= @event.bronze_medalist.last_name %></span> <br><br><br>
-
-<b>Participants:</b><br><br>
-<ul class="participant-list">
+<table class="event-table">
+    <tr>
+      <b><td><img src="/images/gold-medal-vector.jpg" class="table-medal"></td></b> 
+      <b><td><span class="gold"><%= @event.athletes[0].first_name %> <%= @event.athletes[0].last_name %></span></td></b>
+    </tr>
+    <tr>
+      <b><td><img src="/images/silver-medal-vector-1.jpg" class="table-medal"></td></b>
+      <b><td><span class="silver"><%= @event.athletes[1].first_name %> <%= @event.athletes[1].last_name %></span></td></b>
+    </tr>
+    <tr>
+      <b><td><img src="/images/bronze-medal-vector-1.jpg" class="table-medal"></td></b>
+      <b><td><span class="bronze"><%= @event.athletes[2].first_name %> <%= @event.athletes[2].last_name %></span></td></b>
+    </tr>
+    <tr>
+      <b><td>Participants</td></b>
+      <b><td><ul class="participant-list">
   <% @event.athletes.each do |athlete| %> 
   <li><a href="/athletes/<%= athlete.id  %>"><%= athlete.first_name %> <%=athlete.last_name  %></a> from <%=athlete.nation.name  %></li><br>
   <% end %></a>
-</ul>
-  </select>
-<br>
+</ul></td></b>
+    </tr>
+    </table>
+
+
+
 <a href="/events/<%= @event.id %>/edit ">Edit</a>
 
 <p></p>

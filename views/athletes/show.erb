@@ -1,6 +1,26 @@
+<div class="event-content">
 <h2><%= @athlete.first_name %> <%= @athlete.last_name %></h2><br>
-<!-- <img src="https://ssl.gstatic.com/onebox/media/olympics/photos/o16/live/MTZSPDEC8FXJ572I_1536x864.JPG"> -->
-<b>Nation:</b><%= @athlete.nation.name %></p><br>
+
+<b>Nation:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/nations/<%=@athlete.nation.id%>" class="country"><%= @athlete.nation.name %></a></p><br>
+
+<table class="athlete-table">
+  <tr>
+    <td><img src="/images/gold-medal-vector.jpg" class="table-medal"></td>
+    <td><%=@athlete.gold_medals.count  %></td>
+  </tr>  
+  <tr>
+    <td><img src="/images/silver-medal-vector-1.jpg" class="table-medal"></td>
+    <td><%=@athlete.silver_medals.count  %></td>
+  </tr>  
+  <tr>
+    <td><img src="/images/bronze-medal-vector-1.jpg" class="table-medal"></td>
+    <td><%=@athlete.bronze_medals.count  %></td>
+  </tr>
+  <tr>
+    <td>Points</td>
+    <td><%=@athlete.points  %></td>
+  </tr>
+</table>
 
 <b>Events:</b><br><br>
 <% @athlete.events.each do |event| %> 
@@ -9,12 +29,14 @@
 </select>
 <br>
 
-<b>Medals:</b><br><br>
+
+
+<!-- <b>Medals:</b><br><br>
 <b>Gold Medals - <%= @athlete.gold_medals.count  %></b><br><br>
 <b>Silver Medals - <%= @athlete.silver_medals.count  %></b><br><br>
 <b>Bronze Medals - <%= @athlete.bronze_medals.count  %></b><br><br>
 
-<b>Points:</b> <%= @athlete.points %><br><br>
+<b>Points:</b> <%= @athlete.points %><br><br> -->
 
 <a href="/athletes/<%= @athlete.id  %>/edit ">Edit</a>
 

@@ -1,4 +1,4 @@
-<div>
+<div class="event-content">
 <h2><%= @nation.name %></h2>
 
 <img src="<%= @nation.flag %>" class="flag">
@@ -8,17 +8,32 @@
 <!-- PUT IT SO YOU CAN CLICK ON THE ATHLETE'S NAME AND LINKS TO THEIR PAGES. -->
   <p><a href="/athletes/<%=athlete.id%>"><%= athlete.first_name %> <%= athlete.last_name  %></a> : &nbsp; 
   <%athlete.events.each do |event|  %>
-  <%= event.name  %>&nbsp;
+  <%= event.name  %>.&nbsp;
   <% end %> </p>
   <% end %>
 <br>
 
+<table class="athlete-table">
+  <tr>
+    <td><img src="/images/gold-medal-vector.jpg" class="table-medal"></td>
+    <td> <span class="gold"><%= @nation.nation_gold_medals.count  %></span> </td>
+  </tr>
+  <tr>
+    <td><img src="/images/silver-medal-vector-1.jpg" class="table-medal"></td>
+    <td><span class="silver"><%= @nation.nation_silver_medals.count  %> </span> </td>
+  </tr>
+  <tr>
+    <td><img src="/images/bronze-medal-vector-1.jpg" class="table-medal"></td>
+    <td><span class="bronze"><%= @nation.nation_bronze_medals.count  %> </span> </td>
+  </tr>
+  <tr>
+    <td>Points</td>
+    <td><%= @nation.nation_points  %></td>
+  </tr>
 
-<p><b>Gold Medals:</b>  <span class="gold"><%= @nation.nation_gold_medals.count  %></span> </p>
-<p><b>Silver Medals:</b>  <span class="silver"><%= @nation.nation_silver_medals.count  %> </span>  </p>
-<p><b>Bronze Medals:</b>  <span class="bronze"><%= @nation.nation_bronze_medals.count  %> </span>  </p><br>
+</table>
 
-<p><b>Points:</b> <%= @nation.nation_points  %>  </p><br>
+
 
 <p><a href="/nations/<%= @nation.id  %>/edit ">Edit</a></p>
 

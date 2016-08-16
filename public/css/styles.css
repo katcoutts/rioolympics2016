@@ -1,6 +1,7 @@
 html, body {
   background: url('../images/brazil_image.jpg') no-repeat center center fixed;
-  font-family: "Arial Black", Gadget, sans-serif; 
+  /*font-family: 'Oswald', sans-serif;*/
+  font-family: 'Fjalla One', sans-serif;
   width: 100%;}
 
 h1 {
@@ -84,7 +85,7 @@ a:hover {
 h2 {
   font-size: 40px;
   color: #00298C;
-  padding-left: 30px;
+  /*padding-left: 30px;*/
 }
 
 header {
@@ -141,12 +142,22 @@ h3{
   float: left;
 }
 
+.med_flag{
+  height: 50px;
+  width: 75px;
+  border-radius: 10px;
+  display: inline;
+  float: left;
+}
+
 .country {
   margin-left: -40px;
 }
 
 .nation_name{
   margin-left: -60px;
+  color: #00289C;
+  font-size: 25px;
 }
 
 .logo {
@@ -161,5 +172,22 @@ h3{
   height: 60px;
   width: 58px;
   margin: 0 auto;
+}
+
+.event-table ul{
+  list-style: none;
+  text-align: left;
+}
+
+.athlete-table td{
+  padding: 15px 45px;
+}
+
+.athlete-table{
+  margin-left: 100px;
+}
+
+.event-content{
+  margin-left: 100px;
 }
 

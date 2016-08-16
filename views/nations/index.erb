@@ -1,6 +1,7 @@
-<div>
+<div class="event-content">
+<br><br>
 <% @nations.each do |nation| %>
-<img src="<%= nation.flag %>" class="wee_flag"%> <a href="/nations/<%= nation.id  %>" class="nation_name"><%= nation.name %></a><br><br><br>
+<img src="<%= nation.flag %>" class="med_flag"%> <a href="/nations/<%= nation.id  %>" class="nation_name"><%= nation.name %></a><br><br><br>
 <% end %>
 <br>
 <br>

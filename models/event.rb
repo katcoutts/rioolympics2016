@@ -20,26 +20,11 @@ class Event
     @id = event['id']
   end
 
-
   def athletes()
-    sql = "SELECT a.* FROM athletes a INNER JOIN participations p on a.id = p.athlete_id WHERE p.event_id = #{@id};"
+    sql = "SELECT a.* FROM athletes a INNER JOIN participations p on a.id = p.athlete_id WHERE p.event_id = #{@id} ORDER BY p.position;"
     return Athlete.map_items(sql)
   end
 
-  def gold_medalist()
-    sql = "SELECT * FROM athletes a INNER JOIN participations p on a.id = p.athlete_id WHERE p.position = 1"
-    return Athlete.map_item(sql)
-  end
-
-  def silver_medalist()
-    sql = "SELECT * FROM athletes a INNER JOIN participations p on a.id = p.athlete_id WHERE p.position = 2"
-    return Athlete.map_item(sql)
-  end
-
-  def bronze_medalist()
-    sql = "SELECT * FROM athletes a INNER JOIN participations p on a.id = p.athlete_id WHERE p.position = 3"
-    return Athlete.map_item(sql)
-  end
 
 
   def self.all()
