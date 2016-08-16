@@ -3,18 +3,17 @@
   <% @athletes.each do |athlete| %>
   <br>
   <img src="<%= athlete.nation.flag %>" class="index_flag">
-  <span class="athlete-index-name"><%= athlete.first_name %> <%= athlete.last_name %> </span>
-  <a href="/nations/<%= athlete.nation.id %>" class="athlete-nation"> (<%= athlete.nation.name()  %>)</a><br><br>
+  <a href="/athletes/<%= athlete.id%>" class="athlete-index-name"><%= athlete.first_name %> <%= athlete.last_name %></a>&nbsp;
+  <a href="/nations/<%= athlete.nation.id %>" class="athlete-nation"> (<%= athlete.nation.name()  %>)</a><br><br><br><br><br>
 
-  <a href="/athletes/<%= athlete.id%> ">View athlete</a><br><br>
   <hr>
   <% end %>
   <br>
   <br>
   
-  <!-- ACTUALLY ON THIS ONE IT MAY BE MORE SENSIBLE TO HAVE THE BUTTON TO ADD AN ATHLETE ELSEWHERE = OR MAYBE ONLY GET TO IT BY TYPING IT INTO THE BAR AS IT WOULDN'T BE A PUBLIC FACING ACTION -->
-  <a href="/athletes/new">Add an athlete</a><br>
+
+  <a href="/athletes/new" class="basic-link">Add an athlete</a><br>
 </div>
 
-<!-- would be nice to order in some way - maybe alphabetically to start with?? -->
+
 

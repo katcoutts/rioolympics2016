@@ -3,7 +3,7 @@
 
 <img src="<%= @nation.flag %>" class="flag">
 
-<h3>Athletes:</h3>
+<b class="athlete-nation">Athletes:</b>
 <% @nation.athletes.each do |athlete|  %>
 <!-- PUT IT SO YOU CAN CLICK ON THE ATHLETE'S NAME AND LINKS TO THEIR PAGES. -->
   <p><a href="/athletes/<%=athlete.id%>"><%= athlete.first_name %> <%= athlete.last_name  %></a> : &nbsp; 
@@ -54,7 +54,7 @@
 
 
 
-<p><a href="/nations/<%= @nation.id  %>/edit ">Edit</a></p>
+<p><a href="/nations/<%= @nation.id  %>/edit " class="basic-link">Edit</a></p>
 
 <p></p>
 

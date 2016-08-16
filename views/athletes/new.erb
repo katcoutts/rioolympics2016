@@ -11,7 +11,10 @@
     <% @nations.each do |nation| %> 
     <option value= "<%= nation.id%>"><%= nation.name %></option>
     <% end %>
-  </select>
+  </select>&nbsp;
+  <label for="image">Image url:</label>
+  <input type="text" name="image"> 
+
   &nbsp;
   <input type="submit" value="Add Athlete">
 

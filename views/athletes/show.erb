@@ -38,10 +38,10 @@
     <td></td>
   </tr>
 </table>
-
-<b>Events:</b><br><br>
-<% @athlete.events.each do |event| %> 
-<%= event.name %><br><br>
+<br>
+<b class="basic-text">Non-placing events:</b><br><br>
+<% @athlete.non_placing_events.each do |event| %> 
+<a href="/events/<%= event.id %> "><li><b class="basic-text-smaller"><%= event.name %></b></li></a><br><br>
 <% end %>
 </select>
 <br>
@@ -55,11 +55,11 @@
 
 <b>Points:</b> <%= @athlete.points %><br><br> -->
 
-<a href="/athletes/<%= @athlete.id  %>/edit ">Edit</a>
+<a href="/athletes/<%= @athlete.id  %>/edit " class="basic-link">Edit</a>
 
 <p></p>
 <p></p>
-<a href="/participations/new ">Enter into an event</a>
+<a href="/participations/new " class="basic-link">Enter into an event</a>
 <p></p>
 <p></p>
 

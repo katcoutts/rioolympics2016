@@ -161,6 +161,12 @@ class Athlete
     return Event.map_items(sql)
   end
 
+  def non_placing_events()
+    sql = "SELECT e.* FROM events e INNER JOIN participations p on e.id = p.event_id WHERE p.athlete_id = #{@id} AND p.position >= 4;"
+    return Event.map_items(sql)
+  end
+
+
   def points()
     total = 0
     total += (gold_medals.count * 5) + (silver_medals.count * 3) + bronze_medals.count

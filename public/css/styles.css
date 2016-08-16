@@ -20,6 +20,15 @@ table{
     margin: 20px auto;
 }
 
+.event-table {
+  background-color: rgba(8, 123, 57, 1.0);
+  font-size: 20px;
+  margin-left: 140px;
+  margin-top: 30px;
+}
+
+
+
 tr {
   border-right: 2px solid black;
   border-bottom: 2px solid black;
@@ -64,7 +73,7 @@ ul {
 }
 
 .main-link {
-  font-size: 20px;
+  font-size: 25px;
   font-style: bold;
 }
 
@@ -128,7 +137,8 @@ img {
   border-radius: 5px;
   border-style: solid;
   border-width: 5px;
-  border-color: #DE1818;
+  border-color: #00298C;
+  margin-top: -50px;
 }
 
 footer {
@@ -207,6 +217,8 @@ h3{
 
 .athlete-table{
   margin-left: 20px;
+  background-color: rgba(8, 123, 57, 1.0);
+
 }
 
 .event-content{
@@ -227,4 +239,29 @@ h3{
   font-size: 25px;
 }
 
+.participation-index{
+  padding-left: 30px;
+  font-size: 25px;
+}
+
+.participation-index a{
+  background-color: #DE1818;
+  padding: 5px;
+}
+
+
+.basic-link{
+  background-color: #FFEF08;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.basic-text {
+  font-size: 25px;
+
+}
+
+.basic-text-smaller{
+  font-size: 20px;
+}
 

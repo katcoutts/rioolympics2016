@@ -15,7 +15,7 @@ end
 post '/nations' do
   @nation = Nation.new(params)
   @nation.save()
-  erb(:'nations/create' )
+  redirect(to("nations") )
 end
 
 # SHOW
