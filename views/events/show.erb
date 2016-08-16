@@ -2,16 +2,18 @@
 
 <b>Sport:</b>  <%= @event.sport.capitalize %></p><br>
 
-<b>Gold medal winner:</b>  <%= @event.gold_medalist.first_name %> <%= @event.gold_medalist.last_name %> <br><br>
+<b>Gold medal winner:</b> <span class="gold"><%= @event.gold_medalist.first_name %> <%= @event.gold_medalist.last_name %></span>  <br><br>
 
-<b>Silver medal winner:</b>  <%= @event.silver_medalist.first_name %> <%= @event.silver_medalist.last_name %><br><br>
+<b>Silver medal winner:</b> <span class="silver"><%= @event.silver_medalist.first_name %> <%= @event.silver_medalist.last_name %></span><br><br>
 
-<b>Bronze medal winner:</b>  <%= @event.bronze_medalist.first_name %> <%= @event.bronze_medalist.last_name %><br><br>
+<b>Bronze medal winner:</b> <span class="bronze"><%= @event.bronze_medalist.first_name %> <%= @event.bronze_medalist.last_name %></span> <br><br><br>
 
-<b>Participants:</b><br>
+<b>Participants:</b><br><br>
+<ul class="participant-list">
   <% @event.athletes.each do |athlete| %> 
-  <%= athlete.first_name %> <%=athlete.last_name  %> from <%=athlete.nation.name  %><br>
-  <% end %>
+  <li><a href="/athletes/<%= athlete.id  %>"><%= athlete.first_name %> <%=athlete.last_name  %></a> from <%=athlete.nation.name  %></li><br>
+  <% end %></a>
+</ul>
   </select>
 <br>
 <a href="/events/<%= @event.id %>/edit ">Edit</a>

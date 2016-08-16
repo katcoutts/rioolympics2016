@@ -41,6 +41,7 @@ class Event
     return Athlete.map_item(sql)
   end
 
+
   def self.all()
     sql = "SELECT * FROM events"
     events = SqlRunner.run( sql )

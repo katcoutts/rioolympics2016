@@ -8,7 +8,11 @@
   <label for="nation_id">Select a nation:</label>
   <select name="nation_id">
     <% @nations.each do |nation| %>
-    <option value="<%= nation.id %>"><%= nation.name %></option>
+    <% if @athlete.nation_id == nation.id %>
+    <option value="<%= nation.id %>" selected="selected"><%= nation.name %></option>
+    <% else %>
+    <option value="<%=nation.id  %> "><%= nation.name  %> </option>
+    <% end %>
     <% end %>
   </select>
   
