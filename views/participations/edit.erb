@@ -1,22 +1,40 @@
-<!--THIS IS WORKING BUT NEED IT SO THAT DROP DOWN BOX PRE-SELECTS THE VALUES THAT ARE ALREADY IN PLACE -->
+
 
 <h2>Edit entry</h2>
 
-<b>Current entry - </b><%= @participation.athlete.first_name %> <%= @participation.athlete.last_name %> in the <%= @participation.event.name  %><br>
-
-<h4>Enter athlete name and event below to update entry:</h4>
 <form action="/participations/<%=@participation.id%> " method="post">
   <label for="event_id">Select event:</label>
   <select name="event_id">
     <% @events.each do |event| %>
+    <% if event.id == @participation.event_id %>
+    <option value="<%= event.id %>" selected="selected"><%= event.name %></option>
+    <% else %>
     <option value="<%= event.id %>"><%= event.name %></option>
+    <% end %>
     <% end %>&nbsp;&nbsp;
-  </select> <label for="athlete_id">Select an athlete:</label>
+  </select> 
+  <label for="athlete_id">Select an athlete:</label>
   <select name="athlete_id">
+    <% @athletes.each do |athlete| %>
+    <% if athlete.id == @participation.athlete_id %>
+    <option value="<%= athlete.id %>" selected="selected"><%= athlete.first_name%> <%= athlete.last_name  %> </option>
+    <% else %>
+    <option value="<%= athlete.id %>"><%= athlete.first_name%> <%= athlete.last_name  %> </option>
+    <% end %>
+    <% end %>
+  </select>
+  <label for="position">Position:</label>
+  <input type="text" name="position" value="<%="#{@participation.position}"%>">
+  </select>
+
+
+
+
+<!--   <select position="position">
     <% @athletes.each do |athlete| %>
     <option value="<%= athlete.id %>"><%= athlete.first_name%> <%= athlete.last_name  %> </option>
     <% end %>
-  </select>
+  </select> -->
 <!-- NEED TO CHANGE THE ABOVE SO IT ONLY LISTS EACH SPORT ONCE - NOT EVERY SPORT OF EVERY EVENT IF IT'S THE SAME ONE. -->
 
 <!-- ADD IN SO THAT YOU CAN CHANGE THE GOLD MEDALIST/SILVER MEDALIST/BRONZE MEDALIST = BUT DO THIS WHEN WE HAVE PARTICIPANTS SET UP SO THAT YOU CAN SELECT FROM THE PARTICIPANTS - NOT FROM ALL ATHLETES LIKE WE'D HAVE TO DO NOW. THIS WON'T SUBMIT UNTIL YOU HAVE THEM ALL THERE??-->

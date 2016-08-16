@@ -4,7 +4,7 @@
 <img src="<%= @nation.flag %>" class="flag">
 
 <h3>Athletes:</h3>
-</a> <% @nation.athletes.each do |athlete|  %>
+<% @nation.athletes.each do |athlete|  %>
 <!-- PUT IT SO YOU CAN CLICK ON THE ATHLETE'S NAME AND LINKS TO THEIR PAGES. -->
   <p><a href="/athletes/<%=athlete.id%>"><%= athlete.first_name %> <%= athlete.last_name  %></a> : &nbsp; 
   <%athlete.events.each do |event|  %>
@@ -17,18 +17,37 @@
   <tr>
     <td><img src="/images/gold-medal-vector.jpg" class="table-medal"></td>
     <td> <span class="gold"><%= @nation.nation_gold_medals.count  %></span> </td>
+    <td><% @nation.athletes.each do |athlete|  %>
+    <% athlete.gold_events.each do |gold_event|  %>
+    <a href="/events/<%= gold_event.id  %> "><%=gold_event.name  %></a> <br>
+    <% end %>
+  <% end %> &nbsp; 
+    </td>
   </tr>
   <tr>
     <td><img src="/images/silver-medal-vector-1.jpg" class="table-medal"></td>
     <td><span class="silver"><%= @nation.nation_silver_medals.count  %> </span> </td>
+      <td><% @nation.athletes.each do |athlete|  %>
+      <% athlete.silver_events.each do |silver_event|  %>
+      <a href="/events/<%= silver_event.id  %> "><%=silver_event.name  %></a> <br>
+      <% end %>
+    <% end %> &nbsp; 
+      </td>
   </tr>
   <tr>
     <td><img src="/images/bronze-medal-vector-1.jpg" class="table-medal"></td>
     <td><span class="bronze"><%= @nation.nation_bronze_medals.count  %> </span> </td>
+      <td><% @nation.athletes.each do |athlete|  %>
+      <% athlete.bronze_events.each do |bronze_event|  %>
+      <a href="/events/ <%=bronze_event.id  %>"><%=bronze_event.name  %></a> <br>
+      <% end %>
+    <% end %> &nbsp; 
+      </td>
   </tr>
   <tr>
     <td>Points</td>
     <td><%= @nation.nation_points  %></td>
+    <td></td>
   </tr>
 
 </table>
