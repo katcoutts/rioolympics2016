@@ -82,10 +82,15 @@ a:hover {
   color: #FF9900;
 }
 
-h2 {
+h2, .athlete-name {
   font-size: 40px;
   color: #00298C;
   /*padding-left: 30px;*/
+}
+
+.athlete-nation {
+  font-size: 30px;
+  color: black;
 }
 
 header {
@@ -159,6 +164,14 @@ h3{
   float: left;
 }
 
+.index_flag{
+  height: 100px;
+  width: 140px;
+  border-radius: 10px;
+  display: inline;
+  float: right;
+}
+
 .country {
   margin-left: -40px;
 }
@@ -198,5 +211,19 @@ h3{
 
 .event-content{
   margin-left: 100px;
+}
+
+.athlete-index{
+  margin-top: 20px;
+  padding-left: 25px;
+}
+
+.athlete-index-name{
+  font-size: 40px;
+  color: #00289C;
+}
+
+.athlete-nation{
+  font-size: 25px;
 }
 

@@ -1,9 +1,11 @@
+<br>
+<br>
 <div class="event-content">
-<h2><%= @athlete.first_name %> <%= @athlete.last_name %></h2><br>
-
+<span class="athlete-name"><%= @athlete.first_name %> <%= @athlete.last_name %></span>&nbsp; &nbsp; <span class= "athlete-nation">(<%= @athlete.nation.name %>)</span><br>
+<br>
+<br>
 <img src="<%= @athlete.image  %>" class="athlete-image">
 
-<b>Nation:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/nations/<%=@athlete.nation.id%>" class="country"><%= @athlete.nation.name %></a></p><br>
 
 <table class="athlete-table">
   <tr>
@@ -42,6 +44,10 @@
 
 <a href="/athletes/<%= @athlete.id  %>/edit ">Edit</a>
 
+<p></p>
+<p></p>
+<a href="/participations/new ">Enter into an event</a>
+<p></p>
 <p></p>
 
 <form action="/athletes/<%= @athlete.id  %>/delete" method="post">

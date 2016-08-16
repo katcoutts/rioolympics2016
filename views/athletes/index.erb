@@ -1,10 +1,12 @@
-<div>
+<div class="athlete-index">
 
   <% @athletes.each do |athlete| %>
-  <a href="/athletes/<%= athlete.id  %>"><%= athlete.first_name %> <%= athlete.last_name %> </a><br><br>
-  <b>Nation:</b>&nbsp;
-  <a href="/nations/<%= athlete.nation.id %>"></a> <%= athlete.nation.name()  %><br><br>
-  <a href="/athletes/<%= athlete.id%> ">View</a><br><br>
+  <br>
+  <img src="<%= athlete.nation.flag %>" class="index_flag">
+  <span class="athlete-index-name"><%= athlete.first_name %> <%= athlete.last_name %> </span>
+  <a href="/nations/<%= athlete.nation.id %>" class="athlete-nation"> (<%= athlete.nation.name()  %>)</a><br><br>
+
+  <a href="/athletes/<%= athlete.id%> ">View athlete</a><br><br>
   <hr>
   <% end %>
   <br>

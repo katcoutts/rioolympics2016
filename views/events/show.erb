@@ -36,13 +36,23 @@
 </tr>
     </table>
 
+    <% elsif @event.athletes.length >= 1 && @event.athletes.length < 3 %>
+    <b>Participants:</b><br><br>
+    <% @event.athletes.each do |athlete| %> 
+    <a href="/athletes/<%= athlete.id  %>"><%= athlete.first_name %> <%=athlete.last_name  %></a> from <%=athlete.nation.name  %><br>
+    <% end %>
 <% end %>
 
-
-
+<br>
+<br>
 <a href="/events/<%= @event.id %>/edit ">Edit</a>
+<br>
+<br>
 
-<p></p>
+<a href="/participations/new ">Add a participant</a>
+
+<br>
+<br>
 
 <form action="/events/<%= @event.id  %>/delete" method="post">
   <input type="submit" value="Delete">

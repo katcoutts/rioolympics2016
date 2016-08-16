@@ -21,7 +21,7 @@ end
 post '/participations' do
   participation = Participation.new(params)
   participation.save()
-  redirect( to('/participations'))
+  redirect( to("/events/#{participation.event_id}"))
 end
 
 # show
