@@ -32,25 +32,25 @@ nation8.save
 nation9.save
 
 
-athlete1 = Athlete.new({ 'first_name' => 'Usain', 'last_name' => 'Bolt', 'nation_id' => nation2.id})
-athlete2 = Athlete.new({ 'first_name' => 'Yohan', 'last_name' => 'Blake', 'nation_id' => nation2.id})
-athlete3 = Athlete.new({ 'first_name' => 'James', 'last_name' => 'Dasaolu', 'nation_id' => nation1.id})
-athlete4 = Athlete.new({ 'first_name' => 'Jessica', 'last_name' => 'Ennis-Hill', 'nation_id' => nation1.id})
-athlete5 = Athlete.new({ 'first_name' => 'Nafi', 'last_name' => 'Thiam', 'nation_id' => nation3.id})
-athlete6 = Athlete.new({ 'first_name' => 'Katarina', 'last_name' => 'Johnson-Thompson', 'nation_id' => nation1.id})
-athlete7 = Athlete.new({ 'first_name' => 'Adam', 'last_name' => 'Peaty', 'nation_id' => nation1.id})
-athlete8 = Athlete.new({ 'first_name' => 'Cameron', 'last_name' => 'van der Burgh', 'nation_id' => nation4.id})
-athlete9 = Athlete.new({ 'first_name' => 'Cody', 'last_name' => 'Miller', 'nation_id' => nation5.id})
-athlete10 = Athlete.new({ 'first_name' => 'Lilly', 'last_name' => 'King', 'nation_id' => nation5.id})
-athlete11 = Athlete.new({ 'first_name' => 'Yulia', 'last_name' => 'Efimova', 'nation_id' => nation6.id})
-athlete12 = Athlete.new({ 'first_name' => 'Katie', 'last_name' => 'Melli', 'nation_id' => nation5.id})
-athlete13 = Athlete.new({ 'first_name' => 'Jason', 'last_name' => 'Kenny', 'nation_id' => nation1.id})
-athlete14 = Athlete.new({ 'first_name' => 'Callum', 'last_name' => 'Shearer', 'nation_id' => nation1.id})
-athlete15 = Athlete.new({ 'first_name' => 'Matthew', 'last_name' => 'Glaetzer', 'nation_id' => nation7.id})
-athlete16 = Athlete.new({ 'first_name' => 'Michael', 'last_name' => 'Phelps', 'nation_id' => nation5.id})
-athlete17 = Athlete.new({ 'first_name' => 'Masato', 'last_name' => 'Sakai', 'nation_id' => nation8.id})
-athlete18 = Athlete.new({ 'first_name' => 'Tamas', 'last_name' => 'Kenderesi', 'nation_id' => nation9.id})
-athlete19 = Athlete.new({ 'first_name' => 'Kevin', 'last_name' => 'Cordes', 'nation_id' => nation5.id})
+athlete1 = Athlete.new({ 'first_name' => 'Usain', 'last_name' => 'Bolt', 'nation_id' => nation2.id, 'image' => 'https://ssl.gstatic.com/onebox/media/olympics/photos/o16/live/RIOEC8F00STV1_1536x864.JPG'})
+athlete2 = Athlete.new({ 'first_name' => 'Yohan', 'last_name' => 'Blake', 'nation_id' => nation2.id, 'image' => 'https://ssl.gstatic.com/onebox/media/olympics/photos/o16/live/RIOEC8D180JXX_1536x864.JPG'})
+athlete3 = Athlete.new({ 'first_name' => 'James', 'last_name' => 'Dasaolu', 'nation_id' => nation1.id, 'image' => 'https://ssl.gstatic.com/onebox/media/olympics/photos/o16/live/RIOEC8D182TYF_1536x864.JPG'})
+athlete4 = Athlete.new({ 'first_name' => 'Jessica', 'last_name' => 'Ennis-Hill', 'nation_id' => nation1.id, 'image' => 'https://ssl.gstatic.com/onebox/media/olympics/photos/o16/live/RIOEC8E037AT1_1536x864.JPG'})
+athlete5 = Athlete.new({ 'first_name' => 'Nafi', 'last_name' => 'Thiam', 'nation_id' => nation3.id, 'image' => 'https://ssl.gstatic.com/onebox/media/olympics/photos/o16/live/RIOEC8E02HFPD_1536x864.JPG'})
+athlete6 = Athlete.new({ 'first_name' => 'Katarina', 'last_name' => 'Johnson-Thompson', 'nation_id' => nation1.id, 'image' => 'https://ssl.gstatic.com/onebox/media/olympics/photos/o16/live/RIOEC8D1SFR85_1536x864.JPG'})
+athlete7 = Athlete.new({ 'first_name' => 'Adam', 'last_name' => 'Peaty', 'nation_id' => nation1.id, 'image' => 'https://ssl.gstatic.com/onebox/media/olympics/photos/o16/live/RIOEC861FMMRZ_1536x864.JPG'})
+athlete8 = Athlete.new({ 'first_name' => 'Cameron', 'last_name' => 'van der Burgh', 'nation_id' => nation4.id, 'image' => 'https://ssl.gstatic.com/onebox/media/olympics/photos/o16/live/RIOEC861GTPZY_1536x864.JPG'})
+athlete9 = Athlete.new({ 'first_name' => 'Cody', 'last_name' => 'Miller', 'nation_id' => nation5.id, 'image' => 'https://ssl.gstatic.com/onebox/media/olympics/photos/o16/live/RIOEC8806UD24_1536x864.JPG'})
+athlete10 = Athlete.new({ 'first_name' => 'Lilly', 'last_name' => 'King', 'nation_id' => nation5.id, 'image' => 'https://ssl.gstatic.com/onebox/media/olympics/photos/o16/live/RIOEC89062Y0K_1536x864.JPG'})
+athlete11 = Athlete.new({ 'first_name' => 'Yulia', 'last_name' => 'Efimova', 'nation_id' => nation6.id, 'image' => 'https://img.rt.com/files/2016.03/original/56ebb954c4618854408b458f.jpg'})
+athlete12 = Athlete.new({ 'first_name' => 'Katie', 'last_name' => 'Melli', 'nation_id' => nation5.id, 'image' => 'https://ssl.gstatic.com/onebox/media/olympics/photos/o16/live/RIOEC8806S11W_1536x864.JPG'})
+athlete13 = Athlete.new({ 'first_name' => 'Jason', 'last_name' => 'Kenny', 'nation_id' => nation1.id, 'image' => 'https://ssl.gstatic.com/onebox/media/olympics/photos/o16/live/RIOEC8E1MO4HE_1536x864.JPG'})
+athlete14 = Athlete.new({ 'first_name' => 'Callum', 'last_name' => 'Skinner', 'nation_id' => nation1.id, 'image' => 'https://ssl.gstatic.com/onebox/media/olympics/photos/o16/live/RIOEC8B1PDDKY_1536x864.JPG'})
+athlete15 = Athlete.new({ 'first_name' => 'Matthew', 'last_name' => 'Glaetzer', 'nation_id' => nation7.id, 'image' => 'http://www.cycling.org.au/Portals/10/EasyDNNnews/17311/Glaetzer-TT-2.jpg'})
+athlete16 = Athlete.new({ 'first_name' => 'Michael', 'last_name' => 'Phelps', 'nation_id' => nation5.id, 'image' => 'https://ssl.gstatic.com/onebox/media/olympics/photos/o16/live/RIOEC8A04Z0VM_1536x864.JPG'})
+athlete17 = Athlete.new({ 'first_name' => 'Masato', 'last_name' => 'Sakai', 'nation_id' => nation8.id, 'image' => 'https://ssl.gstatic.com/onebox/media/olympics/photos/o16/live/RIOEC8719W56L_1536x864.JPG'})
+athlete18 = Athlete.new({ 'first_name' => 'Tamas', 'last_name' => 'Kenderesi', 'nation_id' => nation9.id, 'image' => 'http://s.cmd.pe/8995861_c48452fd3bbbccdf5371e9ca7f27f82d_x_57a8c00f327d0.jpg'})
+athlete19 = Athlete.new({ 'first_name' => 'Kevin', 'last_name' => 'Cordes', 'nation_id' => nation5.id, 'image' => 'https://ssl.gstatic.com/onebox/media/olympics/photos/o16/live/RIOEC861HOU1M_1536x864.JPG'})
 
 
 
@@ -79,7 +79,7 @@ event2 = Event.new({'name' => 'Heptathlon - Women', 'sport' => 'athletics'})
 event3 = Event.new({'name' => '100m Breaststroke - Men', 'sport' => 'swimming'})
 event4 = Event.new({'name' => '100m Breaststroke - Women', 'sport' => 'swimming'})
 event5 = Event.new({'name' => 'Sprint - Men', 'sport' => 'cycling'})
-event6 = Event.new({'name' => '200m Buttlerfly - Men', 'sport' => 'swimming'})
+event6 = Event.new({'name' => '200m Butterfly - Men', 'sport' => 'swimming'})
 
 event1.save
 event2.save

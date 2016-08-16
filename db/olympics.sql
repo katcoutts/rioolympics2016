@@ -13,7 +13,8 @@ CREATE TABLE athletes (
   id serial4 primary key,
   first_name VARCHAR(255),
   last_name VARCHAR(255),
-  nation_id int4 references nations(id) ON DELETE CASCADE
+  nation_id int4 references nations(id) ON DELETE CASCADE,
+  image VARCHAR(255)
 );
 
 CREATE TABLE events (

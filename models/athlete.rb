@@ -7,17 +7,18 @@ require_relative('./participation.rb')
 
 class Athlete
 
-  attr_reader :first_name, :last_name, :id, :nation_id
+  attr_reader :first_name, :last_name, :id, :nation_id, :image
 
   def initialize(options)
     @id = options['id'].to_i
     @first_name = options['first_name']
     @last_name = options['last_name']
     @nation_id = options['nation_id'].to_i
+    @image = options['image']
   end
 
   def save()
-    sql = "INSERT INTO athletes (first_name, last_name, nation_id) VALUES ('#{ @first_name }', '#{ @last_name }','#{@nation_id}') RETURNING *"
+    sql = "INSERT INTO athletes (first_name, last_name, nation_id, image) VALUES ('#{ @first_name }', '#{ @last_name }','#{@nation_id}', '#{@image}') RETURNING *"
     athlete = SqlRunner.run( sql ).first
     @id = athlete['id']
   end
@@ -45,7 +46,7 @@ class Athlete
 
   def self.update(options)
     sql = "UPDATE athletes SET 
-    first_name = '#{options['first_name']}', last_name = '#{options['last_name']}', nation_id = '#{options['nation_id']}'
+    first_name = '#{options['first_name']}', last_name = '#{options['last_name']}', nation_id = '#{options['nation_id']}', nation_image = '#{options['nation_image']}'
     WHERE id = #{options['id']};"
     SqlRunner.run(sql)
   end

@@ -57,10 +57,10 @@ ul {
 .main-link {
   display: inline-block;
   float: right;
-  padding: 20px;
+  padding: 30px;
   background-color: #DE1818;
-  margin-right: 60px;
-  margin-top: 90px;
+  margin-right: 90px;
+  margin-top: 120px;
 }
 
 .main-link {
@@ -114,7 +114,16 @@ img {
   display: inline-block;
   float: right;
   margin-right: 100px;
-  border-radius: 30px;
+  border-radius: 10px;
+}
+
+.athlete-image {
+  height: 300px;
+  width: 400px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #DE1818;
 }
 
 footer {

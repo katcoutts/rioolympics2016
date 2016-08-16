@@ -1,10 +1,11 @@
+<div class="event-content">
 <h2>Edit athlete</h2>
 
-<form action="/athletes/<%=@athlete.id%> " method="post">
+<form action="/athletes/<%=@athlete.id%> " method="post">&nbsp;
   <label for="first_name">First name:</label>
-  <input type="text" name="first_name" value="<%= @athlete.first_name %>">  
+  <input type="text" name="first_name" value="<%= @athlete.first_name %>"> &nbsp;
   <label for="last_name">Last name:</label>
-  <input type="text" name="last_name" value="<%= @athlete.last_name %>">
+  <input type="text" name="last_name" value="<%= @athlete.last_name %>">&nbsp;
   <label for="nation_id">Select a nation:</label>
   <select name="nation_id">
     <% @nations.each do |nation| %>
@@ -14,7 +15,11 @@
     <option value="<%=nation.id  %> "><%= nation.name  %> </option>
     <% end %>
     <% end %>
-  </select>
+  </select>&nbsp;  
+  <label for="image">Edit image link:</label>
+  <input type="text" name="image" value="<%= "#{@athlete.image}"%>">
+  
   
   <input type='submit' value="Update athlete">
 </form>
+</div>
