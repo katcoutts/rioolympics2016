@@ -8,7 +8,7 @@
 <!-- PUT IT SO YOU CAN CLICK ON THE ATHLETE'S NAME AND LINKS TO THEIR PAGES. -->
   <p><a href="/athletes/<%=athlete.id%>"><%= athlete.first_name %> <%= athlete.last_name  %></a> : &nbsp; 
   <%athlete.events.each do |event|  %>
-  <%= event.name  %>,&nbsp;
+  <%= event.name  %>&nbsp;
   <% end %> </p>
   <% end %>
 <br>

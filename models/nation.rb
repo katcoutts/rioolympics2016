@@ -66,58 +66,58 @@ class Nation
   end
 
   def nation_gold_medals
-    gold_medal_count = []
+    gold_medals = []
     athletes.each do |athlete|
       if athlete.gold_medals != []
-        gold_medal_count << athlete.gold_medals
+        gold_medals.concat(athlete.gold_medals)
       end
     end
-    return gold_medal_count
+    return gold_medals
   end
 
-  def nation_gold_medals_count
-    gold_medal_count = 0
-    athletes.each do |athlete|
-        gold_medal_count += athlete.gold_medals_count
-    end
-    return gold_medal_count
-  end
+  # def nation_gold_medals_count
+  #   gold_medal_count = 0
+  #   athletes.each do |athlete|
+  #       gold_medal_count += athlete.gold_medals_count
+  #   end
+  #   return gold_medal_count
+  # end
 
   def nation_silver_medals
     silver_medal_count = []
     athletes.each do |athlete|
       if athlete.silver_medals != []
-        silver_medal_count << athlete.silver_medals
+        silver_medal_count.concat(athlete.silver_medals)
       end
     end
     return silver_medal_count
   end
 
-  def nation_silver_medals_count
-    silver_medal_count = 0
-    athletes.each do |athlete|
-        silver_medal_count += athlete.silver_medals_count
-    end
-    return silver_medal_count
-  end
+  # def nation_silver_medals_count
+  #   silver_medal_count = 0
+  #   athletes.each do |athlete|
+  #       silver_medal_count += athlete.silver_medals_count
+  #   end
+  #   return silver_medal_count
+  # end
 
   def nation_bronze_medals
     bronze_medal_count = []
     athletes.each do |athlete|
       if athlete.bronze_medals != []
-        bronze_medal_count << athlete.bronze_medals
+        bronze_medal_count.concat(athlete.bronze_medals)
       end
     end
     return bronze_medal_count
   end
 
-  def nation_bronze_medals_count
-    bronze_medal_count = 0
-    athletes.each do |athlete|
-        bronze_medal_count += athlete.bronze_medals_count
-    end
-    return bronze_medal_count
-  end
+  # def nation_bronze_medals_count
+  #   bronze_medal_count = 0
+  #   athletes.each do |athlete|
+  #       bronze_medal_count += athlete.bronze_medals_count
+  #   end
+  #   return bronze_medal_count
+  # end
 
   # def events
   # end

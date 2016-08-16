@@ -13,25 +13,7 @@
   <option value= "Tennis">Tennis </option>
   </select>
   &nbsp;
-  <label for="gold_id">Gold medal athlete:</label>
-  <select name="gold_id"> 
-  <% @athletes.each do |athlete| %> 
-  <option value= "<%= athlete.id%>"><%= athlete.first_name %> <%= athlete.last_name %> </option> 
-  <% end %>
-  </select>
-  &nbsp; <label for="silver_id">Silver medal athlete:</label>
-  <select name="silver_id"> 
-  <% @athletes.each do |athlete| %> 
-  <option value= "<%= athlete.id%>"><%= athlete.first_name %> <%= athlete.last_name %> </option> 
-  <% end %>
-  </select>
-  &nbsp; <label for="bronze_id">Bronze medal athlete:</label>
-  <select name="bronze_id"> 
-  <% @athletes.each do |athlete| %> 
-  <option value= "<%= athlete.id%>"><%= athlete.first_name %> <%= athlete.last_name %> </option> 
-  <% end %>
-  </select>
-  &nbsp;
+  
   <input type="submit" value="Add Event">
 
 <!-- NB THIS WON'T WORK UNTIL WE CAN ADD GOLD-ID, SILVER-ID AND BRONZE-ID -->

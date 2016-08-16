@@ -33,8 +33,6 @@ class Standing
     end
 
 
-
-
   end
 
 # BELOW IS ANOTHER WAY OF SORTING BY MULTIPLE THINGS WHICH IS WORKING.
