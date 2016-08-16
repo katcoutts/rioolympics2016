@@ -66,16 +66,15 @@ ul {
 .main-link {
   display: inline-block;
   float: right;
-  padding: 30px;
+  padding: 20px;
   background-color: #DE1818;
-  margin-right: 90px;
+  margin-right: 70px;
   margin-top: 120px;
-}
-
-.main-link {
-  font-size: 25px;
+  font-size: 35px;
   font-style: bold;
 }
+
+
 
 .participant-list {
   list-style-type: circle;
