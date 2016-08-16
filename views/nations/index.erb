@@ -1,12 +1,15 @@
 <div class="event-content">
 <br><br>
 <% @nations.each do |nation| %>
-<img src="<%= nation.flag %>" class="med_flag"%> <a href="/nations/<%= nation.id  %>" class="nation_name"><%= nation.name %></a><br><br><br>
+<a href="/nations/<%= nation.id  %>" class="nation_name"><img src="<%= nation.flag %>" class="med_flag"%> <%= nation.name %></a><br><br><br><br>
 <% end %>
 <br>
 <br>
 <a href="/nations/new">Add a nation</a><br>
 </div>
+
+
+
 
 
 

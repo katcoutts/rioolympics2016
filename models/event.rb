@@ -28,7 +28,7 @@ class Event
 
 
   def self.all()
-    sql = "SELECT * FROM events"
+    sql = "SELECT * FROM events ORDER BY events.sport"
     events = SqlRunner.run( sql )
     result = events.map { |e| Event.new( e ) }
     return result

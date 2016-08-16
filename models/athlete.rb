@@ -77,6 +77,8 @@ class Athlete
     participations = Participation.map_items(sql)
   end
 
+
+
   def gold_medals
     gold_medals = []
     participations.each do |participation|
@@ -141,6 +143,21 @@ class Athlete
 
   def events()
     sql = "SELECT e.* FROM events e INNER JOIN participations p on e.id = p.event_id WHERE p.athlete_id = #{@id};"
+    return Event.map_items(sql)
+  end
+
+  def gold_events()
+    sql = "SELECT e.* FROM events e INNER JOIN participations p on e.id = p.event_id WHERE p.athlete_id = #{@id} AND p.position = 1;"
+    return Event.map_items(sql)
+  end
+
+  def silver_events()
+    sql = "SELECT e.* FROM events e INNER JOIN participations p on e.id = p.event_id WHERE p.athlete_id = #{@id} AND p.position = 2;"
+    return Event.map_items(sql)
+  end
+
+  def bronze_events()
+    sql = "SELECT e.* FROM events e INNER JOIN participations p on e.id = p.event_id WHERE p.athlete_id = #{@id} AND p.position = 3;"
     return Event.map_items(sql)
   end
 

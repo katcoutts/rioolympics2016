@@ -8,7 +8,7 @@ require_relative('../models/athlete')
 
 # index
 get '/events' do
-  @events = Event.all
+  @events = Event.all()
   erb(:'events/index')
 end
 
