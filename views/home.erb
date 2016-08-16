@@ -1,6 +1,7 @@
 <table>
   <thead>
     <tr>
+    <b><th>Position</th></b>
       <b><th>Nation</th></b> 
       <b><th><img src="images/gold-medal-vector.jpg" class="table-medal"></th></b>
       <b><th><img src="images/silver-medal-vector-1.jpg" class="table-medal"></th></b>
@@ -9,10 +10,12 @@
     </tr>
   </thead>
   <tbody>
+  <% count=0 %>
   <% standings = @standing.order_by_points %>
   <% standings.each do |country| %>
     <tr>
-      <td><img src="<%= country[:flag] %>" class="wee_flag"%> <a href="/nations/<%=country[:id]%>" class="country"><%= country[:name]%></a></td> 
+    <td><%= count += 1  %></td>
+      <td><img src="<%= country[:flag] %>" class="wee_flag"%> <a href="/nations/<%=country[:id]%>" class="country"><b><%= country[:name]%></b></a></td> 
       <td><span class="gold"><%= country[:gold_medals]%></span></td> 
       <td><span class="silver"><%= country[:silver_medals]%></span></td> 
       <td><span class="bronze"><%= country[:bronze_medals]%></span></td> 
