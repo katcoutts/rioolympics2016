@@ -74,12 +74,12 @@ athlete17.save
 athlete18.save
 athlete19.save
 
-event1 = Event.new({'name' => '100m sprint - Men', 'sport' => 'athletics', 'gold_id' => athlete1.id, 'silver_id' => athlete2.id, 'bronze_id' => athlete3.id })
-event2 = Event.new({'name' => 'Heptathlon - Women', 'sport' => 'athletics', 'gold_id' => athlete4.id, 'silver_id' => athlete5.id, 'bronze_id' => athlete6.id })
-event3 = Event.new({'name' => '100m Breaststroke - Men', 'sport' => 'swimming', 'gold_id' => athlete7.id, 'silver_id' => athlete8.id, 'bronze_id' => athlete9.id })
-event4 = Event.new({'name' => '100m Breaststroke - Women', 'sport' => 'swimming', 'gold_id' => athlete10.id, 'silver_id' => athlete11.id, 'bronze_id' => athlete12.id })
-event5 = Event.new({'name' => 'Sprint - Men', 'sport' => 'cycling', 'gold_id' => athlete13.id, 'silver_id' => athlete14.id, 'bronze_id' => athlete15.id })
-event6 = Event.new({'name' => '200m Buttlerfly - Men', 'sport' => 'swimming', 'gold_id' => athlete14.id, 'silver_id' => athlete15.id, 'bronze_id' => athlete16.id })
+event1 = Event.new({'name' => '100m sprint - Men', 'sport' => 'athletics'})
+event2 = Event.new({'name' => 'Heptathlon - Women', 'sport' => 'athletics'})
+event3 = Event.new({'name' => '100m Breaststroke - Men', 'sport' => 'swimming'})
+event4 = Event.new({'name' => '100m Breaststroke - Women', 'sport' => 'swimming'})
+event5 = Event.new({'name' => 'Sprint - Men', 'sport' => 'cycling'})
+event6 = Event.new({'name' => '200m Buttlerfly - Men', 'sport' => 'swimming'})
 
 event1.save
 event2.save
@@ -90,25 +90,25 @@ event6.save
 
 
 
-participation1 = Participation.new({'athlete_id' => athlete1.id, 'event_id' => event1.id})
-participation2 = Participation.new({'athlete_id' => athlete2.id, 'event_id' => event1.id})
-participation3 = Participation.new({'athlete_id' => athlete3.id, 'event_id' => event1.id})
-participation4 = Participation.new({'athlete_id' => athlete4.id, 'event_id' => event2.id})
-participation5 = Participation.new({'athlete_id' => athlete5.id, 'event_id' => event2.id})
-participation6 = Participation.new({'athlete_id' => athlete6.id, 'event_id' => event2.id})
-participation7 = Participation.new({'athlete_id' => athlete7.id, 'event_id' => event3.id})
-participation8 = Participation.new({'athlete_id' => athlete8.id, 'event_id' => event3.id})
-participation9 = Participation.new({'athlete_id' => athlete9.id, 'event_id' => event3.id})
-participation10 = Participation.new({'athlete_id' => athlete10.id, 'event_id' => event4.id})
-participation11 = Participation.new({'athlete_id' => athlete11.id, 'event_id' => event4.id})
-participation12 = Participation.new({'athlete_id' => athlete12.id, 'event_id' => event4.id})
-participation13 = Participation.new({'athlete_id' => athlete13.id, 'event_id' => event5.id})
-participation14 = Participation.new({'athlete_id' => athlete14.id, 'event_id' => event5.id})
-participation15 = Participation.new({'athlete_id' => athlete15.id, 'event_id' => event5.id})
-participation16 = Participation.new({'athlete_id' => athlete16.id, 'event_id' => event6.id})
-participation17 = Participation.new({'athlete_id' => athlete17.id, 'event_id' => event6.id})
-participation18 = Participation.new({'athlete_id' => athlete18.id, 'event_id' => event6.id})
-participation19 = Participation.new({'athlete_id' => athlete19.id, 'event_id' => event3.id})
+participation1 = Participation.new({'athlete_id' => athlete1.id, 'event_id' => event1.id, 'position' => 1})
+participation2 = Participation.new({'athlete_id' => athlete2.id, 'event_id' => event1.id, 'position' => 2})
+participation3 = Participation.new({'athlete_id' => athlete3.id, 'event_id' => event1.id, 'position' => 3})
+participation4 = Participation.new({'athlete_id' => athlete4.id, 'event_id' => event2.id, 'position' => 1})
+participation5 = Participation.new({'athlete_id' => athlete5.id, 'event_id' => event2.id, 'position' => 2})
+participation6 = Participation.new({'athlete_id' => athlete6.id, 'event_id' => event2.id, 'position' => 3})
+participation7 = Participation.new({'athlete_id' => athlete7.id, 'event_id' => event3.id, 'position' => 1})
+participation8 = Participation.new({'athlete_id' => athlete8.id, 'event_id' => event3.id, 'position' => 2})
+participation9 = Participation.new({'athlete_id' => athlete9.id, 'event_id' => event3.id, 'position' => 3})
+participation10 = Participation.new({'athlete_id' => athlete10.id, 'event_id' => event4.id, 'position' => 1})
+participation11 = Participation.new({'athlete_id' => athlete11.id, 'event_id' => event4.id, 'position' => 2})
+participation12 = Participation.new({'athlete_id' => athlete12.id, 'event_id' => event4.id, 'position' => 3})
+participation13 = Participation.new({'athlete_id' => athlete13.id, 'event_id' => event5.id, 'position' => 1})
+participation14 = Participation.new({'athlete_id' => athlete14.id, 'event_id' => event5.id, 'position' => 2})
+participation15 = Participation.new({'athlete_id' => athlete15.id, 'event_id' => event5.id, 'position' => 3})
+participation16 = Participation.new({'athlete_id' => athlete16.id, 'event_id' => event6.id, 'position' => 1})
+participation17 = Participation.new({'athlete_id' => athlete17.id, 'event_id' => event6.id, 'position' => 2})
+participation18 = Participation.new({'athlete_id' => athlete18.id, 'event_id' => event6.id, 'position' => 3})
+participation19 = Participation.new({'athlete_id' => athlete19.id, 'event_id' => event3.id, 'position' => 4})
 
 
 

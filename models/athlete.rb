@@ -71,6 +71,78 @@ class Athlete
     return result.first
   end
 
+  def participations
+    sql = "SELECT participations.* FROM participations WHERE participations.athlete_id = #{@id}"
+    participations = Participation.map_items(sql)
+  end
+
+  def gold_medals
+    gold_medals = []
+    participations.each do |participation|
+      if participation.position == 1
+        gold_medals << participation
+      end
+    end
+    return gold_medals
+  end  
+
+  # def gold_medals_count()
+  #   gold_medals = 0
+  #   participations.each do |participation|
+  #     if participation.position == 1
+  #       gold_medals += 1
+  #     end
+  #   end
+  #   return gold_medals
+  # end 
+
+  def silver_medals
+    silver_medals = []
+    participations.each do |participation|
+      if participation.position == 2
+        silver_medals << participation
+      end
+    end
+    return silver_medals
+  end 
+
+
+  # def silver_medals_count()
+  #   silver_medals = 0
+  #   participations.each do |participation|
+  #     if participation.position == 1
+  #       silver_medals += 1
+  #     end
+  #   end
+  #   return silver_medals
+  # end  
+
+  def bronze_medals
+    bronze_medals = []
+    participations.each do |participation|
+      if participation.position == 3
+        bronze_medals << participation
+      end
+    end
+    return bronze_medals
+  end
+
+
+  # def bronze_medals_count()
+  #   bronze_medals = 0
+  #   participations.each do |participation|
+  #     if participation.position == 1
+  #       bronze_medals += 1
+  #     end
+  #   end
+  #   return bronze_medals
+  # end 
+
+  def events()
+    sql = "SELECT e.* FROM events e INNER JOIN participations p on e.id = p.event_id WHERE p.athlete_id = #{@id};"
+    return Event.map_items(sql)
+  end
+
   def points()
     total = 0
     total += (gold_medals.count * 5) + (silver_medals.count * 3) + bronze_medals.count
@@ -82,70 +154,67 @@ class Athlete
   #   return points
   # end
 
-  def gold_medals_count()
-    gold_medals = 0
-    events.each do |event|
-      if event.gold_id.to_i == @id
-        gold_medals += 1
-      end
-    end
-    return gold_medals
-  end  
+  # def gold_medals_count()
+  #   gold_medals = 0
+  #   events.each do |event|
+  #     if event.gold_id.to_i == @id
+  #       gold_medals += 1
+  #     end
+  #   end
+  #   return gold_medals
+  # end  
 
-  def gold_medals()
-    gold_medals = []
-    events.each do |event|
-      if event.gold_id.to_i == @id
-        gold_medals << event
-      end
-    end
-    return gold_medals
-  end  
+  # def gold_medals()
+  #   gold_medals = []
+  #   events.each do |event|
+  #     if event.gold_id.to_i == @id
+  #       gold_medals << event
+  #     end
+  #   end
+  #   return gold_medals
+  # end  
 
-  def silver_medals_count()
-    silver_medals = 0
-    events.each do |event|
-      if event.silver_id.to_i == @id
-        silver_medals += 1
-      end
-    end
-    return silver_medals
-  end  
+  # def silver_medals_count()
+  #   silver_medals = 0
+  #   events.each do |event|
+  #     if event.silver_id.to_i == @id
+  #       silver_medals += 1
+  #     end
+  #   end
+  #   return silver_medals
+  # end  
 
-  def silver_medals()
-    silver_medals = []
-    events.each do |event|
-      if event.silver_id.to_i == @id
-        silver_medals << event
-      end
-    end
-    return silver_medals
-  end  
+  # def silver_medals()
+  #   silver_medals = []
+  #   events.each do |event|
+  #     if event.silver_id.to_i == @id
+  #       silver_medals << event
+  #     end
+  #   end
+  #   return silver_medals
+  # end  
 
-  def bronze_medals_count()
-    bronze_medals = 0
-    events.each do |event|
-      if event.bronze_id.to_i == @id
-        bronze_medals += 1
-      end
-    end
-    return bronze_medals
-  end  
+  # def bronze_medals_count()
+  #   bronze_medals = 0
+  #   events.each do |event|
+  #     if event.bronze_id.to_i == @id
+  #       bronze_medals += 1
+  #     end
+  #   end
+  #   return bronze_medals
+  # end  
 
-  def bronze_medals()
-    bronze_medals = []
-    events.each do |event|
-      if event.bronze_id.to_i == @id
-        bronze_medals << event
-      end
-    end
-    return bronze_medals
-  end
+  # def bronze_medals()
+  #   bronze_medals = []
+  #   events.each do |event|
+  #     if event.bronze_id.to_i == @id
+  #       bronze_medals << event
+  #     end
+  #   end
+  #   return bronze_medals
+  # end
 
-  def events()
-    sql = "SELECT e.* FROM events e INNER JOIN participations p on e.id = p.event_id WHERE p.athlete_id = #{@id};"
-    return Event.map_items(sql)
-  end
+ 
 
 
 end

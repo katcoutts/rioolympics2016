@@ -2,24 +2,19 @@ require('pg')
 require_relative('../db/sql_runner.rb')
 
 
-# to here could add a result field / position field, perhaps WR(true/false), OR(true/false), PB(true/false)
-# the athlete would have a PB which would be consulted to see if this is a PB.
-# the event would have an WR and an OR which would be consulted to see if that particular instance was a WR or OR - so you're not hard-coding the true and false?
-
-# Might need to actually break some events where there aren't times/distances - and perhaps team events where multiple winners? - THAT'S EXTRA STUFF.
-
 class Participation
 
-  attr_reader :id, :athlete_id, :event_id
+  attr_reader :id, :athlete_id, :event_id, :position
 
   def initialize( options )
     @id = options['id'].to_i
     @athlete_id = options['athlete_id'].to_i
     @event_id = options['event_id'].to_i
+    @position = options['position'].to_i
   end
 
   def save()
-    sql = "INSERT INTO participations (athlete_id, event_id) VALUES (#{@athlete_id}, #{@event_id}) RETURNING *"
+    sql = "INSERT INTO participations (athlete_id, event_id, position) VALUES (#{@athlete_id}, #{@event_id}, #{@position}) RETURNING *"
     participation = SqlRunner.run(sql).first
     @id = participation['id']
   end
@@ -41,7 +36,7 @@ class Participation
 
   def self.update(options)
     sql = "UPDATE participations SET 
-    athlete_id = '#{options['athlete_id']}', event_id = '#{options['event_id']}'
+    athlete_id = '#{options['athlete_id']}', event_id = '#{options['event_id']}', position = '#{options['position']}'
     WHERE id = #{options['id']};"
     SqlRunner.run(sql)
   end

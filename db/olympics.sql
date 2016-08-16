@@ -19,16 +19,17 @@ CREATE TABLE athletes (
 CREATE TABLE events (
   id serial4 primary key,
   name VARCHAR(255),
-  sport VARCHAR(255),
-  gold_id int4 references athletes(id) ON DELETE CASCADE,
-  silver_id int4 references athletes(id) ON DELETE CASCADE,
-  bronze_id int4 references athletes(id) ON DELETE CASCADE
+  sport VARCHAR(255)
+  -- gold_id int4 references athletes(id) ON DELETE CASCADE,
+  -- silver_id int4 references athletes(id) ON DELETE CASCADE,
+  -- bronze_id int4 references athletes(id) ON DELETE CASCADE
 );
 
 CREATE TABLE participations (
   id serial4 primary key,
   athlete_id int4 references athletes(id) ON DELETE CASCADE,
-  event_id int4 references events(id) ON DELETE CASCADE
+  event_id int4 references events(id) ON DELETE CASCADE,
+  position int4
 );
 
 -- further for participations table enter a result - eg time - for each participation

@@ -6,19 +6,16 @@ require_relative('./participation.rb')
 
 class Event
 
-  attr_reader :id, :name, :sport, :gold_id, :silver_id, :bronze_id
+  attr_reader :id, :name, :sport
 
   def initialize(options)
     @id = options['id'].to_i
     @name = options['name']
     @sport = options['sport']
-    @gold_id = options['gold_id']
-    @silver_id = options['silver_id']
-    @bronze_id = options['bronze_id']
   end
 
   def save()
-    sql = "INSERT INTO events (name, sport, gold_id, silver_id, bronze_id) VALUES ('#{ @name }', '#{@sport}', '#{@gold_id}', '#{@silver_id}', '#{@bronze_id}') RETURNING *"
+    sql = "INSERT INTO events (name, sport) VALUES ('#{ @name }', '#{@sport}') RETURNING *"
     event = SqlRunner.run( sql ).first
     @id = event['id']
   end
@@ -30,17 +27,17 @@ class Event
   end
 
   def gold_medalist()
-    sql = "SELECT * FROM athletes WHERE id = #{@gold_id}"
+    sql = "SELECT * FROM athletes a INNER JOIN participations p on a.id = p.athlete_id WHERE p.position = 1"
     return Athlete.map_item(sql)
   end
 
   def silver_medalist()
-    sql = "SELECT * FROM athletes WHERE id = #{@silver_id}"
+    sql = "SELECT * FROM athletes a INNER JOIN participations p on a.id = p.athlete_id WHERE p.position = 2"
     return Athlete.map_item(sql)
   end
 
   def bronze_medalist()
-    sql = "SELECT * FROM athletes WHERE id = #{@bronze_id}"
+    sql = "SELECT * FROM athletes a INNER JOIN participations p on a.id = p.athlete_id WHERE p.position = 3"
     return Athlete.map_item(sql)
   end
 
@@ -59,7 +56,7 @@ class Event
 
   def self.update(options)
     sql = "UPDATE events SET 
-    name = '#{options['name']}', sport = '#{options['sport']}', gold_id = '#{options['gold_id']}', silver_id = '#{options['silver_id']}', bronze_id = '#{options['bronze_id']}'
+    name = '#{options['name']}', sport = '#{options['sport']}'
     WHERE id = #{options['id']};"
     SqlRunner.run(sql)
   end
