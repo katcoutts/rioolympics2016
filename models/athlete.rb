@@ -89,15 +89,7 @@ class Athlete
     return gold_medals
   end  
 
-  # def gold_medals_count()
-  #   gold_medals = 0
-  #   participations.each do |participation|
-  #     if participation.position == 1
-  #       gold_medals += 1
-  #     end
-  #   end
-  #   return gold_medals
-  # end 
+
 
   def silver_medals
     silver_medals = []
@@ -110,15 +102,6 @@ class Athlete
   end 
 
 
-  # def silver_medals_count()
-  #   silver_medals = 0
-  #   participations.each do |participation|
-  #     if participation.position == 1
-  #       silver_medals += 1
-  #     end
-  #   end
-  #   return silver_medals
-  # end  
 
   def bronze_medals
     bronze_medals = []
@@ -131,15 +114,6 @@ class Athlete
   end
 
 
-  # def bronze_medals_count()
-  #   bronze_medals = 0
-  #   participations.each do |participation|
-  #     if participation.position == 1
-  #       bronze_medals += 1
-  #     end
-  #   end
-  #   return bronze_medals
-  # end 
 
   def events()
     sql = "SELECT e.* FROM events e INNER JOIN participations p on e.id = p.event_id WHERE p.athlete_id = #{@id};"
@@ -166,6 +140,13 @@ class Athlete
     return Event.map_items(sql)
   end
 
+  def positions
+    sql = "SELECT events.name, participations.position FROM events INNER JOIN participations on events.id = participations.event_id WHERE participations.athlete_id = #{@id};"
+    result = SqlRunner.run(sql)
+    return result
+  end
+
+
 
   def points()
     total = 0
@@ -173,81 +154,102 @@ class Athlete
     return total
   end
 
-  # def league_points()
-  #   points = (wins.count * 2) + draws.count
-  #   return points
-  # end
-
-  # def gold_medals_count()
-  #   gold_medals = 0
-  #   events.each do |event|
-  #     if event.gold_id.to_i == @id
-  #       gold_medals += 1
-  #     end
-  #   end
-  #   return gold_medals
-  # end  
-
-  # def gold_medals()
-  #   gold_medals = []
-  #   events.each do |event|
-  #     if event.gold_id.to_i == @id
-  #       gold_medals << event
-  #     end
-  #   end
-  #   return gold_medals
-  # end  
-
-  # def silver_medals_count()
-  #   silver_medals = 0
-  #   events.each do |event|
-  #     if event.silver_id.to_i == @id
-  #       silver_medals += 1
-  #     end
-  #   end
-  #   return silver_medals
-  # end  
-
-  # def silver_medals()
-  #   silver_medals = []
-  #   events.each do |event|
-  #     if event.silver_id.to_i == @id
-  #       silver_medals << event
-  #     end
-  #   end
-  #   return silver_medals
-  # end  
-
-  # def bronze_medals_count()
-  #   bronze_medals = 0
-  #   events.each do |event|
-  #     if event.bronze_id.to_i == @id
-  #       bronze_medals += 1
-  #     end
-  #   end
-  #   return bronze_medals
-  # end  
-
-  # def bronze_medals()
-  #   bronze_medals = []
-  #   events.each do |event|
-  #     if event.bronze_id.to_i == @id
-  #       bronze_medals << event
-  #     end
-  #   end
-  #   return bronze_medals
-  # end
-
  
-
 
 end
 
 
+# def gold_medals_count()
+#   gold_medals = 0
+#   events.each do |event|
+#     if event.gold_id.to_i == @id
+#       gold_medals += 1
+#     end
+#   end
+#   return gold_medals
+# end  
+
+# def gold_medals()
+#   gold_medals = []
+#   events.each do |event|
+#     if event.gold_id.to_i == @id
+#       gold_medals << event
+#     end
+#   end
+#   return gold_medals
+# end  
+
+# def silver_medals_count()
+#   silver_medals = 0
+#   events.each do |event|
+#     if event.silver_id.to_i == @id
+#       silver_medals += 1
+#     end
+#   end
+#   return silver_medals
+# end  
+
+# def silver_medals()
+#   silver_medals = []
+#   events.each do |event|
+#     if event.silver_id.to_i == @id
+#       silver_medals << event
+#     end
+#   end
+#   return silver_medals
+# end  
+
+# def bronze_medals_count()
+#   bronze_medals = 0
+#   events.each do |event|
+#     if event.bronze_id.to_i == @id
+#       bronze_medals += 1
+#     end
+#   end
+#   return bronze_medals
+# end  
+
+# def bronze_medals()
+#   bronze_medals = []
+#   events.each do |event|
+#     if event.bronze_id.to_i == @id
+#       bronze_medals << event
+#     end
+#   end
+#   return bronze_medals
+# end
+
+# def gold_medals_count()
+#   gold_medals = 0
+#   participations.each do |participation|
+#     if participation.position == 1
+#       gold_medals += 1
+#     end
+#   end
+#   return gold_medals
+# end 
 
 
+# def silver_medals_count()
+#   silver_medals = 0
+#   participations.each do |participation|
+#     if participation.position == 1
+#       silver_medals += 1
+#     end
+#   end
+#   return silver_medals
+# end  
 
 
+# def bronze_medals_count()
+#   bronze_medals = 0
+#   participations.each do |participation|
+#     if participation.position == 1
+#       bronze_medals += 1
+#     end
+#   end
+#   return bronze_medals
+# end 
 
 
 

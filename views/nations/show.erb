@@ -15,7 +15,7 @@
 
 <table class="athlete-table">
   <tr>
-    <td><img src="/images/gold-medal-vector.jpg" class="table-medal"></td>
+    <td><img src="/images/gold-png.png" class="table-medal"></td>
     <td> <span class="gold"><%= @nation.nation_gold_medals.count  %></span> </td>
     <td><% @nation.athletes.each do |athlete|  %>
     <% athlete.gold_events.each do |gold_event|  %>
@@ -25,7 +25,7 @@
     </td>
   </tr>
   <tr>
-    <td><img src="/images/silver-medal-vector-1.jpg" class="table-medal"></td>
+    <td><img src="/images/silver-png.png" class="table-medal"></td>
     <td><span class="silver"><%= @nation.nation_silver_medals.count  %> </span> </td>
       <td><% @nation.athletes.each do |athlete|  %>
       <% athlete.silver_events.each do |silver_event|  %>
@@ -35,7 +35,7 @@
       </td>
   </tr>
   <tr>
-    <td><img src="/images/bronze-medal-vector-1.jpg" class="table-medal"></td>
+    <td><img src="/images/bronze-png.png" class="table-medal"></td>
     <td><span class="bronze"><%= @nation.nation_bronze_medals.count  %> </span> </td>
       <td><% @nation.athletes.each do |athlete|  %>
       <% athlete.bronze_events.each do |bronze_event|  %>

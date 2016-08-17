@@ -9,7 +9,7 @@
 
 <table class="athlete-table">
   <tr>
-    <td><img src="/images/gold-medal-vector.jpg" class="table-medal"></td>
+    <td><img src="/images/gold-png.png" class="table-medal"></td>
     <td><%=@athlete.gold_medals.count  %></td>
     <td><% @athlete.gold_events.each do |gold_event|  %>
           <a href="/events/<%=gold_event.id %> "><%= gold_event.name  %></a><br> 
@@ -17,7 +17,7 @@
    </td>
   </tr>  
   <tr>
-    <td><img src="/images/silver-medal-vector-1.jpg" class="table-medal"></td>
+    <td><img src="/images/silver-png.png" class="table-medal"></td>
     <td><%=@athlete.silver_medals.count  %></td>
      <td><% @athlete.silver_events.each do |silver_event|  %>
            <a href="/events/<%=silver_event.id %> "><%= silver_event.name  %></a><br>
@@ -25,7 +25,7 @@
     </td>
   </tr>  
   <tr>
-    <td><img src="/images/bronze-medal-vector-1.jpg" class="table-medal"></td>
+    <td><img src="/images/bronze-png.png" class="table-medal"></td>
     <td><%=@athlete.bronze_medals.count  %></td>
      <td><% @athlete.bronze_events.each do |bronze_event|  %>
            <a href="/events/<%=bronze_event.id %> "><%= bronze_event.name  %></a><br>
@@ -39,12 +39,21 @@
   </tr>
 </table>
 <br>
-<b class="basic-text">Non-placing events:</b><br><br>
-<% @athlete.non_placing_events.each do |event| %> 
-<a href="/events/<%= event.id %> "><li><b class="basic-text-smaller"><%= event.name %></b></li></a><br><br>
+<b class="basic-text">Results:</b><br><br>
+<% @athlete.positions.each do |hash|  %>
+Event: <%= hash['name'] %> -- Position: <%= hash['position']  %>
 <% end %>
-</select>
 <br>
+<br>
+<br>
+<br>
+
+<!-- <b class="basic-text">Non-placing events:</b><br><br>
+<%# @athlete.non_placing_events.each do |event| %> 
+<a href="/events/<%#= event.id %> "><li><b class="basic-text-smaller"><%#= event.name %></b></li></a><br><br>
+<%# end %>
+</select>
+<br> -->
 
  
 
@@ -63,7 +72,10 @@
 <p></p>
 <p></p>
 
+
+
 <form action="/athletes/<%= @athlete.id  %>/delete" method="post">
   <input type="submit" value="Delete">
 </form>
+
 </div>

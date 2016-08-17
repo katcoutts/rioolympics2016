@@ -1,6 +1,5 @@
 html, body {
   background: url('../images/brazil_image.jpg') no-repeat center center fixed;
-  /*font-family: 'Oswald', sans-serif;*/
   font-family: 'Fjalla One', sans-serif;
   width: 100%;}
 
@@ -13,8 +12,6 @@ h1 {
 }
 
 table{
-    border: 2px solid black;
-    padding: auto, 0;
     border-collapse: collapse;
     background-color: rgba(0, 41, 140, 0.8);
     margin: 20px auto;
@@ -28,14 +25,7 @@ table{
 }
 
 
-
-tr {
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
-}
-
 td, th {
-  border-left: 2px solid black;
   text-align: center;
   padding: 15px; 
 }
@@ -66,11 +56,11 @@ ul {
 .main-link {
   display: inline-block;
   float: right;
-  padding: 20px;
+  padding: 10px;
   background-color: #DE1818;
   margin-right: 70px;
   margin-top: 120px;
-  font-size: 35px;
+  font-size: 30px;
   font-style: bold;
 }
 
@@ -101,9 +91,7 @@ h2, .athlete-name {
   color: black;
 }
 
-header {
-  height: 270px;
-}
+
 
 .gold {
   color: gold;
@@ -202,7 +190,7 @@ h3{
 .logo {
   float: left;
   height: 200px;
-  width: 250px;
+  width: 280px;
   margin-left: 100px;
   margin-top: 20px;
 }
@@ -211,6 +199,10 @@ h3{
   height: 60px;
   width: 58px;
   margin: 0 auto;
+}
+
+.event-table {
+  text-align: center;
 }
 
 .event-table ul{
@@ -272,3 +264,150 @@ h3{
   font-size: 20px;
 }
 
+.table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  max-width: 600px;
+  padding:10px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+ 
+th {
+  color:#D5DDE5;;
+  background:#1b1e24;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:23px;
+  font-weight: 100;
+  padding:30px;
+  text-align:center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+th:first-child {
+  border-top-left-radius:3px;
+}
+ 
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom-: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+ 
+tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+  border-bottom: 1px solid #22262e;
+}
+ 
+tr:first-child {
+  border-top:none;
+}
+
+tr:last-child {
+  border-bottom:none;
+}
+ 
+tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+ 
+tr:nth-child(odd):hover td {
+  background:#4E5066;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+ 
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+ 
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:center;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}
+
+@media (max-width: 1050px) {
+
+
+  .header-banner {
+    height: auto;
+    display: flex;
+     flex-direction: column;
+  }
+
+  .main-link {
+    display: block;
+    margin: 10px auto;
+    font-size: 20px;
+  }
+}
+
+
+@media (max-width: 500px) {
+.logo {
+  width: 70px;
+  height: 120px;
+}
+
+.main-link {
+  display: block;
+  float: right;
+  margin: 10px auto;
+  font-size: 15px;
+  align: center;
+  clear: top;
+}
+
+}
