@@ -40,8 +40,10 @@
 </table>
 <br>
 <b class="results">Results:</b><br><br>
-<b class = "basic-text"> <% @athlete.positions.each do |hash|  %>
-Event: <%= hash['name'] %> -- Position: <%= hash['position']  %></b>
+<% @athlete.positions.each do |hash|  %>
+<b class = "basic-text"> Event: <%= hash['name'] %> -- Position: <%= hash['position']  %></b>
+<br>
+<br>
 <% end %>
 <br>
 <br>

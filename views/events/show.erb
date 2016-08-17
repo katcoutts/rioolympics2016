@@ -2,7 +2,7 @@
 <br>
 <div class="event-content">
 <span class="athlete-name"><%= @event.name %></span>&nbsp; &nbsp; <span class= "athlete-nation">(<%= @event.sport.capitalize %>)</span><br>
-
+<br>
 
 <% if @event.athletes.length >= 3 %>
   <table class="event-table">
@@ -53,8 +53,9 @@
       </td>
     </tr>
   </table>
+
   <% elsif @event.athletes.length >= 1 && @event.athletes.length < 3 %>
-    <b>Participants:</b>
+    <b>Participants:</b><br>
     <% @event.athletes.each do |athlete| %> 
       <a href="/athletes/<%= athlete.id  %>"><%= athlete.first_name %> <%=athlete.last_name  %></a> &nbsp;(<%=athlete.nation.name  %>)<br>
     <% end %>
