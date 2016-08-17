@@ -3,7 +3,7 @@
 <h2>Edit entry</h2>
 
 <form action="/participations/<%=@participation.id%> " method="post">
-  <label for="event_id">Select event:</label>
+  <label for="event_id">Select event:</label>&nbsp;
   <select name="event_id">
     <% @events.each do |event| %>
     <% if event.id == @participation.event_id %>
@@ -13,7 +13,7 @@
     <% end %>
     <% end %>&nbsp;&nbsp;
   </select> 
-  <label for="athlete_id">Select an athlete:</label>
+  <label for="athlete_id">Select an athlete:</label>&nbsp;
   <select name="athlete_id">
     <% @athletes.each do |athlete| %>
     <% if athlete.id == @participation.athlete_id %>

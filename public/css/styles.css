@@ -248,7 +248,12 @@ h3{
   padding: 5px;
 }
 
+input[type="submit" i] {
+  font-size: 20px;
+  color: black;
+  background-color: #DE1818;
 
+}
 .basic-link{
   background-color: #FFEF08;
   font-size: 20px;
@@ -256,8 +261,12 @@ h3{
 }
 
 .basic-text {
-  font-size: 25px;
+  font-size: 20px;
 
+}
+
+.results {
+  font-size: 35px;
 }
 
 .basic-text-smaller{

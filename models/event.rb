@@ -25,7 +25,11 @@ class Event
     return Athlete.map_items(sql)
   end
 
-
+  def results()
+    sql = "SELECT athletes.first_name, athletes.last_name, participations.position FROM athletes INNER JOIN participations on athletes.id = participations.athlete_id WHERE participations.event_id = #{@id};"
+    result = SqlRunner.run(sql)
+    return result
+  end
 
   def self.all()
     sql = "SELECT * FROM events ORDER BY events.sport"

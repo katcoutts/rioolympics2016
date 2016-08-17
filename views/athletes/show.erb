@@ -39,9 +39,9 @@
   </tr>
 </table>
 <br>
-<b class="basic-text">Results:</b><br><br>
-<% @athlete.positions.each do |hash|  %>
-Event: <%= hash['name'] %> -- Position: <%= hash['position']  %>
+<b class="results">Results:</b><br><br>
+<b class = "basic-text"> <% @athlete.positions.each do |hash|  %>
+Event: <%= hash['name'] %> -- Position: <%= hash['position']  %></b>
 <% end %>
 <br>
 <br>
@@ -72,7 +72,8 @@ Event: <%= hash['name'] %> -- Position: <%= hash['position']  %>
 <p></p>
 <p></p>
 
-
+<br>
+<br>
 
 <form action="/athletes/<%= @athlete.id  %>/delete" method="post">
   <input type="submit" value="Delete">
