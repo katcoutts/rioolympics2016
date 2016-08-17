@@ -1,10 +1,10 @@
 
-  <% @events.each do |event| %>
-  <div class="list-event"> <br>
+<% @events.each do |event| %>
+<div class="list-event"> <br>
   <a href="/events/<%= event.id  %>" class="athlete-index-name"><%= event.name %></a><br><br>
   <span class="athlete-nation"><b>Sport:</b>&nbsp;
-  <%= event.sport.capitalize()  %></span><br><br>
- 
+    <%= event.sport.capitalize()  %></span><br><br>
+    
   </div>
   <hr>
   <% end %>

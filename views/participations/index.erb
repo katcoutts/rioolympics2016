@@ -1,19 +1,19 @@
 <br><br>
 
-  <% @participations.each do |participation| %>
-  <div class="participation-index">
+<% @participations.each do |participation| %>
+<div class="participation-index">
   <br>
-    <b>Event:</b> <%= participation.event.name  %>&nbsp; &nbsp;  <b>Athlete:</b> <%= participation.athlete.first_name  %> <%= participation.athlete.last_name  %>&nbsp; &nbsp;
-    <b>Position:</b><b><%= participation.position  %> </b><br><br>
-    <a href="/participations/<%= participation.id%> ">View</a>&nbsp;&nbsp;<a href="/participations/<%= participation.id  %>/edit ">Edit</a><br><br>
-    <form action="/participations/<%= participation.id  %>/delete" method="post" class="delete">
-      <input type="submit" value="Delete">
-    </form>
-    </div>
-    <hr>
-  <% end %>
-  <br>
-  <br>
+  <b>Event:</b> <%= participation.event.name  %>&nbsp; &nbsp;  <b>Athlete:</b> <%= participation.athlete.first_name  %> <%= participation.athlete.last_name  %>&nbsp; &nbsp;
+  <b>Position:</b><b><%= participation.position  %> </b><br><br>
+  <a href="/participations/<%= participation.id%> ">View</a>&nbsp;&nbsp;<a href="/participations/<%= participation.id  %>/edit ">Edit</a><br><br>
+  <form action="/participations/<%= participation.id  %>/delete" method="post" class="delete">
+    <input type="submit" value="Delete">
+  </form>
+</div>
+<hr>
+<% end %>
+<br>
+<br>
 
-  <a href="/participations/new" class="basic-link">Add another participant</a>
+<a href="/participations/new" class="basic-link">Add another participant</a>
 

@@ -10,9 +10,9 @@
   &nbsp;
   <label for="athlete_id">Athlete:</label>
   <select name="athlete_id"> 
-  <% @athletes.each do |athlete| %> 
-  <option value= "<%= athlete.id%>"><%= athlete.first_name %> <%= athlete.last_name %> </option> 
-  <% end %>
+    <% @athletes.each do |athlete| %> 
+    <option value= "<%= athlete.id%>"><%= athlete.first_name %> <%= athlete.last_name %> </option> 
+    <% end %>
   </select>
   &nbsp;
   <label for="position">Position:</label> 

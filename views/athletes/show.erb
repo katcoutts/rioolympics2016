@@ -1,42 +1,42 @@
 <br>
 <br>
 <div class="event-content">
-<span class="athlete-name"><%= @athlete.first_name %> <%= @athlete.last_name %></span>&nbsp; &nbsp; <span class= "athlete-nation">(<%= @athlete.nation.name %>)</span><br>
-<br>
-<br>
-<img src="<%= @athlete.image  %>" class="athlete-image">
+  <span class="athlete-name"><%= @athlete.first_name %> <%= @athlete.last_name %></span>&nbsp; &nbsp; <span class= "athlete-nation">(<%= @athlete.nation.name %>)</span><br>
+  <br>
+  <br>
+  <img src="<%= @athlete.image  %>" class="athlete-image">
 
 
-<table class="athlete-table">
-  <tr>
-    <td><img src="/images/gold-png.png" class="table-medal"></td>
-    <td><%=@athlete.gold_medals.count  %></td>
-    <td><% @athlete.gold_events.each do |gold_event|  %>
-          <a href="/events/<%=gold_event.id %> "><%= gold_event.name  %></a><br> 
-          <% end %>
-   </td>
-  </tr>  
-  <tr>
-    <td><img src="/images/silver-png.png" class="table-medal"></td>
-    <td><%=@athlete.silver_medals.count  %></td>
-     <td><% @athlete.silver_events.each do |silver_event|  %>
-           <a href="/events/<%=silver_event.id %> "><%= silver_event.name  %></a><br>
-           <%end %>
-    </td>
-  </tr>  
-  <tr>
+  <table class="athlete-table">
+    <tr>
+      <td><img src="/images/gold-png.png" class="table-medal"></td>
+      <td><%=@athlete.gold_medals.count  %></td>
+      <td><% @athlete.gold_events.each do |gold_event|  %>
+        <a href="/events/<%=gold_event.id %> "><%= gold_event.name  %></a><br> 
+        <% end %>
+      </td>
+    </tr>  
+    <tr>
+      <td><img src="/images/silver-png.png" class="table-medal"></td>
+      <td><%=@athlete.silver_medals.count  %></td>
+      <td><% @athlete.silver_events.each do |silver_event|  %>
+       <a href="/events/<%=silver_event.id %> "><%= silver_event.name  %></a><br>
+       <%end %>
+     </td>
+   </tr>  
+   <tr>
     <td><img src="/images/bronze-png.png" class="table-medal"></td>
     <td><%=@athlete.bronze_medals.count  %></td>
-     <td><% @athlete.bronze_events.each do |bronze_event|  %>
-           <a href="/events/<%=bronze_event.id %> "><%= bronze_event.name  %></a><br>
-           <% end %>
-    </td>
-  </tr>
-  <tr>
-    <td>Points</td>
-    <td><%=@athlete.points  %></td>
-    <td></td>
-  </tr>
+    <td><% @athlete.bronze_events.each do |bronze_event|  %>
+     <a href="/events/<%=bronze_event.id %> "><%= bronze_event.name  %></a><br>
+     <% end %>
+   </td>
+ </tr>
+ <tr>
+  <td>Points</td>
+  <td><%=@athlete.points  %></td>
+  <td></td>
+</tr>
 </table>
 <br>
 <b class="results">Results:</b><br><br>
@@ -57,7 +57,7 @@
 </select>
 <br> -->
 
- 
+
 
 <!-- <b>Medals:</b><br><br>
 <b>Gold Medals - <%= @athlete.gold_medals.count  %></b><br><br>

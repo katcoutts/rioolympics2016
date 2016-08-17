@@ -1,27 +1,26 @@
 <div class="event-content">
-<h2>Edit event</h2>
+  <h2>Edit event</h2>
 
-<form action="/events/<%=@event.id%> " method="post">
-  <label for="name">Name:</label>&nbsp;
-  <input type="text" name="name" value="<%= @event.name %>">  
+  <form action="/events/<%=@event.id%> " method="post">
+    <label for="name">Name:</label>&nbsp;
+    <input type="text" name="name" value="<%= @event.name %>">  
     <label for="sport">Select a sport:</label>
     <select name="sport"> 
-    <option value= "Rowing">Rowing </option>
-    <option value= "Athletics">Athletics </option>
-    <option value= "Gymnastics">Gymnastics </option>
-    <option value= "Cycling">Cycling </option>
-    <option value= "Tennis">Tennis </option>    
-    <option value= "Swimming">Swimming </option>
-    <option value= "Golf">Golf </option>
-    <option value= "Equestrian">Equestrian </option>
-    <option value= "Rugby">Rugby </option>
-    <option value= "Other">Other </option>
-  </select>
+      <option value= "Rowing">Rowing </option>
+      <option value= "Athletics">Athletics </option>
+      <option value= "Gymnastics">Gymnastics </option>
+      <option value= "Cycling">Cycling </option>
+      <option value= "Tennis">Tennis </option>    
+      <option value= "Swimming">Swimming </option>
+      <option value= "Golf">Golf </option>
+      <option value= "Equestrian">Equestrian </option>
+      <option value= "Rugby">Rugby </option>
+      <option value= "Other">Other </option>
+    </select>
 
- 
-  <!-- NEED TO CHANGE THE ABOVE SO IT ONLY LISTS EACH SPORT ONCE - NOT EVERY SPORT OF EVERY EVENT IF IT'S THE SAME ONE. -->
+    <br>
+    <br>
 
-  
-  <input type='submit' value="Update event">
-</form>
+    <input type='submit' value="Update event">
+  </form>
 </div>

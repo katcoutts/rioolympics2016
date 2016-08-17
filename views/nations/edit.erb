@@ -1,12 +1,12 @@
 <div class="event-content">
-<h2>Edit nation</h2>
+  <h2>Edit nation</h2>
 
-<form action="/nations/<%=@nation.id%> " method="post">
-  <label for="name">Name:</label>
-  <input type="text" name="name" value="<%= @nation.name %>">
-  <label for="flag">Flag image:</label> 
-  <!-- NEED TO DO THIS SO THAT THE FLAG'S CURRENT IMAGE URL APPEARS IN THE BOX -->
-  <input type="text" name="flag" value="<%= "#{@nation.flag}"%>">
-  <input type='submit' value="Update nation">
-</form>
+  <form action="/nations/<%=@nation.id%> " method="post">
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="<%= @nation.name %>">
+    <label for="flag">Flag image:</label> 
+    <!-- NEED TO DO THIS SO THAT THE FLAG'S CURRENT IMAGE URL APPEARS IN THE BOX -->
+    <input type="text" name="flag" value="<%= "#{@nation.flag}"%>">
+    <input type='submit' value="Update nation">
+  </form>
 </div>
