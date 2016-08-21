@@ -19,9 +19,9 @@ end
 
 # create
 post '/participations' do
-  participation = Participation.new(params)
-  participation.save()
-  redirect( to("/events/#{participation.event_id}"))
+  @participation = Participation.new(params)
+  @participation.save()
+  redirect( to("/events/#{@participation.event_id}"))
 end
 
 # show
@@ -46,6 +46,20 @@ post '/participations/:id' do
   Participation.update(params)
   redirect(to("/participations/#{params[:id]}"))
 end
+
+#add a result
+# get '/participations/:id/new_result' do
+#   @events = Event.all
+#   @athletes = Athlete.all
+#   @participation = Participation.find( params[:id] )
+#   erb( :'participations/new_result')
+# end
+
+#update result
+# post '/participations/:id' do
+#   Participation.update(params)
+#   redirect(to("/participations/#{params[:id]}"))
+# end
 
 # # DESTROY
 post '/participations/:id/delete' do

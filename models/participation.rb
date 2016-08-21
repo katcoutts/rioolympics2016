@@ -19,6 +19,18 @@ class Participation
     @id = participation['id']
   end
 
+# below that an update-result method which should just allow you to give a result rather than a full update method.
+# in participation new erb page have commented out the two lines that asked you to enter a position.
+
+
+  def self.update_result(options)
+    sql = "UPDATE participations SET position = #{options['position']}
+           WHERE id = #{options['id']};"
+    SqlRunner.run(sql)
+  end
+
+
+
   def athlete()
     sql = "SELECT * FROM athletes WHERE id = #{@athlete_id}"
     return Athlete.map_item(sql)

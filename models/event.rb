@@ -28,7 +28,8 @@ class Event
   def results()
     sql = "SELECT athletes.first_name, athletes.last_name, participations.position FROM athletes INNER JOIN participations on athletes.id = participations.athlete_id WHERE participations.event_id = #{@id};"
     result = SqlRunner.run(sql)
-    return result
+    ordered_results = result.sort_by { |k| k["position"].to_i }
+    return ordered_results
   end
 
   def self.all()

@@ -15,8 +15,10 @@
     <% end %>
   </select>
   &nbsp;
-  <label for="position">Position:</label> 
-  <input type="number" name="position"> 
+  <!-- need to do something here to assign a position of 0 without it being seen on the page so it gets returned as params -->
+  <input type="hidden" name="position" value="0">
+ <!--  <label for="position">Position:</label> 
+  <input type="number" name="position">  -->
   <input type="submit" value="Add entry">
 
 

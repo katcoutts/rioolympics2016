@@ -5,7 +5,7 @@
 
   <b class="athlete-nation">Athletes:</b>
   <% @nation.athletes.each do |athlete|  %>
-  <!-- PUT IT SO YOU CAN CLICK ON THE ATHLETE'S NAME AND LINKS TO THEIR PAGES. -->
+
   <p class="basic-text"><a href="/athletes/<%=athlete.id%>"><%= athlete.first_name %> <%= athlete.last_name  %></a> : &nbsp; 
     <%athlete.events.each do |event|  %>
     <%= event.name  %> (<%= event.sport.capitalize %>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

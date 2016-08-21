@@ -4,7 +4,7 @@
   <span class="athlete-name"><%= @event.name %></span>&nbsp; &nbsp; <span class= "athlete-nation">(<%= @event.sport.capitalize %>)</span><br>
   <br>
 
-  <% if @event.athletes.length >= 3 %>
+  <% if @event.athletes.length >= 3 && @event.results[0]['position'] == '1'%>
   <table class="event-table">
     <tr>
       <td>
@@ -12,7 +12,7 @@
       </td> 
       <td>
         <span class="gold">
-          <%= @event.athletes[0].first_name %> <%= @event.athletes[0].last_name %>
+          <a href="/athletes/<%=@event.athletes[0].id%>"><%= @event.athletes[0].first_name %> <%= @event.athletes[0].last_name %></a>
         </span>
       </td>
     </tr>
@@ -22,7 +22,7 @@
       </td>
       <td>
         <span class="silver">
-          <%= @event.athletes[1].first_name %> <%= @event.athletes[1].last_name %>
+          <a href="/athletes/<%=@event.athletes[1].id%>"><%= @event.athletes[1].first_name %> <%= @event.athletes[1].last_name %></a>
         </span>
       </td>
     </tr>
@@ -32,7 +32,7 @@
       </td>
       <td>
         <span class="bronze">
-          <%= @event.athletes[2].first_name %> <%= @event.athletes[2].last_name %>
+          <a href="/athletes/<%=@event.athletes[2].id%>"><%= @event.athletes[2].first_name %> <%= @event.athletes[2].last_name %></a>
         </span>
       </td>
     </tr>
@@ -54,10 +54,10 @@
     </tr>
   </table>
 
-  <% elsif @event.athletes.length >= 1 && @event.athletes.length < 3 %>
-  <b>Participants:</b><br>
+  <% elsif @event.athletes.length >= 1%>
+  <b class="basic-text">Participants:</b><br><br>
   <% @event.athletes.each do |athlete| %> 
-  <a href="/athletes/<%= athlete.id  %>"><%= athlete.first_name %> <%=athlete.last_name  %></a> &nbsp;(<%=athlete.nation.name  %>)<br>
+  <a href="/athletes/<%= athlete.id  %>" class="basic-text"><%= athlete.first_name %> <%=athlete.last_name  %></a> &nbsp;(<%=athlete.nation.name  %>)<br>
   <% end %>
   <% end %>
 

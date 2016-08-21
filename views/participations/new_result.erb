@@ -1,0 +1,10 @@
+<h2>Athlete name:</h2><b><%= @participation.athlete.first_name %> <%= @participation.athlete.last_name  %></b>
+<h2>Event:</h2><b><%= @participation.event.name  %> </b>
+<h2>Position:</h2><b><%= @participation.position  %> </b>
+<form>
+  <label for="position">Enter a position:</label> 
+  <input type="number" name="position"> 
+  <input type="submit" value="Add position">
+</form>
+
+</div>

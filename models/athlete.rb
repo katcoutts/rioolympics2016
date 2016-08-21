@@ -7,6 +7,18 @@ require_relative('./participation.rb')
 
 class Athlete
 
+  # class of athlete. Each athlete has to have first name and last name (this will allow them to be ordered alphabetically). 
+  # they need to have a nation-id to allow them to be linked to one of the nations.
+  # they need to be given an id which will be used in participations as a way of linking an athlete to an event.
+
+
+
+
+
+
+
+
+
   attr_reader :first_name, :last_name, :id, :nation_id, :image
 
   def initialize(options)

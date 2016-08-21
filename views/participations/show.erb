@@ -1,11 +1,21 @@
-<h2>Athlete name:</h2><b><%= @participation.athlete.first_name %> <%= @participation.athlete.last_name  %></b>
-<h2>Event:</h2><b><%= @participation.event.name  %> </b>
-<h2>Position:</h2><b><%= @participation.position  %> </b>
+<h2>Athlete name:</h2><b class="basic-text"><%= @participation.athlete.first_name %> <%= @participation.athlete.last_name  %></b>
+<h2>Event:</h2><b class="basic-text"><%= @participation.event.name  %> </b>
+<h2>Position:</h2><b class="basic-text"><%= @participation.position  %> </b>
 
 <br>
 
-<h2>Athlete's nation:</h2><b><%= @participation.athlete.nation.name %></b><br><br>
-<a href="/participations/<%= @participation.id  %>/edit ">Edit</a>
+<h2>Athlete's nation:</h2><b class="basic-text"><%= @participation.athlete.nation.name %></b>
+<br>
+<br>
+<br>
+
+<!-- <#%if @participation.position == 0  %> -->
+<!-- <a href="/participations/<%= @participation.id %>/new_result " class="basic-link">Add Result</a> -->
+<!-- <#% end %> -->
+
+<a href="/participations/<%= @participation.id  %>/edit " class="basic-link">Edit Details</a>
+
+<a href="/events/<%= @participation.event_id  %>" class="basic-link">View Event</a>
 
 <p></p>
 
