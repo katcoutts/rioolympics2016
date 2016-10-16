@@ -21,3 +21,6 @@ Screenshot of homepage with dynamic medal table:
 
 Screenshot of an example page for an individual athlete:
 <img width="1269" alt="screen shot 2016-10-16 at 15 22 51" src="https://cloud.githubusercontent.com/assets/17859815/19418137/de04ecc2-93b5-11e6-8e5c-17389d866683.png">
+
+Screenshot of an example of a country page. A country's page displays the relevant flag and a list of the athletes competing for that country together with the events they are competing in. It contains a dynamic medals table which shows the medals that country has won and what events they were won in.
+<img width="1187" alt="screen shot 2016-10-16 at 15 24 18" src="https://cloud.githubusercontent.com/assets/17859815/19418159/4f85cc2c-93b6-11e6-9eab-9ed0af959e24.png">
