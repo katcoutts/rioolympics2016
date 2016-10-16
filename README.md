@@ -16,3 +16,5 @@ output results in JSON
 
 ###Screenshots
 
+Screenshot of homepage with dynamic medal table:
+<img width="1274" alt="screen shot 2016-10-16 at 15 22 30" src="https://cloud.githubusercontent.com/assets/17859815/19418128/a573cffe-93b5-11e6-93c9-3a6585fd96aa.png">
