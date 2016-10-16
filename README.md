@@ -18,3 +18,6 @@ output results in JSON
 
 Screenshot of homepage with dynamic medal table:
 <img width="1274" alt="screen shot 2016-10-16 at 15 22 30" src="https://cloud.githubusercontent.com/assets/17859815/19418128/a573cffe-93b5-11e6-93c9-3a6585fd96aa.png">
+
+Screenshot of an example page for an individual athlete:
+<img width="1269" alt="screen shot 2016-10-16 at 15 22 51" src="https://cloud.githubusercontent.com/assets/17859815/19418137/de04ecc2-93b5-11e6-8e5c-17389d866683.png">
