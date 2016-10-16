@@ -24,3 +24,6 @@ Screenshot of an example page for an individual athlete:
 
 Screenshot of an example of a country page. A country's page displays the relevant flag and a list of the athletes competing for that country together with the events they are competing in. It contains a dynamic medals table which shows the medals that country has won and what events they were won in.
 <img width="1187" alt="screen shot 2016-10-16 at 15 24 18" src="https://cloud.githubusercontent.com/assets/17859815/19418159/4f85cc2c-93b6-11e6-9eab-9ed0af959e24.png">
+
+Screenshot of an example of an event page. Event pages give the name of the event and a table displaying the medal winners and positions of all those who took part.
+<img width="1218" alt="screen shot 2016-10-16 at 15 37 26" src="https://cloud.githubusercontent.com/assets/17859815/19418181/cd505b7c-93b6-11e6-87d1-1a71732c2822.png">
